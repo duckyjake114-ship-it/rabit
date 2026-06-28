@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BugLens is the AI camera that names any insect or spider in seconds. Point, snap, and learn — inspired by the Picture Insect app.">
+  <title>BugLens – Point Your Camera, Know the Bug</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%9E%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.8 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Shared site styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <span class="brand-mark"><i class="bi bi-bug-fill"></i></span> BugLens
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="social.html">Social</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="#" data-store="apple" class="btn btn-primary btn-sm px-3">Get the App</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-6 text-center text-lg-start">
+            <span class="eyebrow"><i class="bi bi-stars"></i> AI-powered identification</span>
+            <h1 class="display-4 fw-bold">Point your camera. <br> Know the bug instantly.</h1>
+            <p class="lead my-4 text-secondary">BugLens identifies thousands of insects and spiders from a single photo — then teaches you everything about them, from habitat to whether that bite needs a doctor.</p>
+
+            <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4">
+              <a href="#" data-store="apple" class="btn-store">
+                <i class="bi bi-apple"></i>
+                <span class="store-label"><small>Download on the</small>App Store</span>
+              </a>
+              <a href="#" data-store="google" class="btn-store">
+                <i class="bi bi-google-play"></i>
+                <span class="store-label"><small>Get it on</small>Google Play</span>
+              </a>
+            </div>
+
+            <div class="hero-rating justify-content-center justify-content-lg-start">
+              <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+              <span>Loved by 3M+ curious explorers worldwide</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="phone-stage">
+              <div class="phone-mockup">
+                <div class="notch"></div>
+                <img src="assets/images.jpg" alt="BugLens app screen identifying an insect from a photo">
+              </div>
+              <div class="phone-chip id-result"><i class="bi bi-check-circle-fill"></i> Monarch Butterfly</div>
+              <div class="phone-chip accuracy"><i class="bi bi-graph-up"></i> 97.8% match</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPECIES MARQUEE ===== -->
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span><i class="bi bi-bug"></i>Butterflies</span>
+        <span><i class="bi bi-bug"></i>Beetles</span>
+        <span><i class="bi bi-bug"></i>Spiders</span>
+        <span><i class="bi bi-bug"></i>Moths</span>
+        <span><i class="bi bi-bug"></i>Ants</span>
+        <span><i class="bi bi-bug"></i>Bees & Wasps</span>
+        <span><i class="bi bi-bug"></i>Dragonflies</span>
+        <span><i class="bi bi-bug"></i>Beetles</span>
+        <span><i class="bi bi-bug"></i>Spiders</span>
+        <span><i class="bi bi-bug"></i>Moths</span>
+        <span><i class="bi bi-bug"></i>Ants</span>
+        <span><i class="bi bi-bug"></i>Bees & Wasps</span>
+        <span><i class="bi bi-bug"></i>Dragonflies</span>
+        <span><i class="bi bi-bug"></i>Butterflies</span>
+      </div>
+    </div>
+
+    <!-- ===== STATS ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number"><span data-counter="4000" data-suffix="+">0</span></div>
+              <div class="stat-label">Species in the database</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number"><span data-counter="3" data-suffix="M+">0</span></div>
+              <div class="stat-label">Explorers worldwide</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number"><span data-counter="95" data-suffix="%">0</span></div>
+              <div class="stat-label">Average ID accuracy</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number"><span data-counter="1" data-suffix="s">0</span></div>
+              <div class="stat-label">Average identification time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="py-5">
+      <div class="container text-center">
+        <div class="mb-5">
+          <h2 class="fw-bold">Built for curious minds</h2>
+          <p class="text-secondary">Everything you need to go from "what is that?!" to expert in seconds.</p>
+        </div>
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <div class="surface-card text-center">
+              <div class="icon-badge mx-auto"><i class="bi bi-camera-fill"></i></div>
+              <h3 class="h5">Snap & Identify</h3>
+              <p class="text-secondary mb-0">Point your camera or upload a photo — get a match in about a second.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="surface-card text-center">
+              <div class="icon-badge mx-auto"><i class="bi bi-bullseye"></i></div>
+              <h3 class="h5">High Accuracy</h3>
+              <p class="text-secondary mb-0">Trained on millions of real-world photos, even for tricky lookalike species.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="surface-card text-center">
+              <div class="icon-badge mx-auto"><i class="bi bi-shield-fill-exclamation"></i></div>
+              <h3 class="h5">Bite & Sting Safety</h3>
+              <p class="text-secondary mb-0">Instantly check if a species is venomous and what to do if you're bitten.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="surface-card text-center">
+              <div class="icon-badge mx-auto"><i class="bi bi-wifi-off"></i></div>
+              <h3 class="h5">Works Offline</h3>
+              <p class="text-secondary mb-0">No signal in the woods? Your last 20 IDs stay saved and searchable.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="surface-card text-center">
+              <div class="icon-badge mx-auto"><i class="bi bi-journal-richtext"></i></div>
+              <h3 class="h5">Field Journal</h3>
+              <p class="text-secondary mb-0">Every find is saved to your personal collection with date and location.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="surface-card text-center">
+              <div class="icon-badge mx-auto"><i class="bi bi-translate"></i></div>
+              <h3 class="h5">12 Languages</h3>
+              <p class="text-secondary mb-0">Species info and care tips, translated for explorers everywhere.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Three steps. That's it.</h2>
+          <p class="text-secondary">No sign-up required to try your first identification.</p>
+        </div>
+        <div class="row g-4 steps-row">
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h3 class="h5">Snap a photo</h3>
+              <p class="text-secondary">Open BugLens and point your camera, or pick a photo from your gallery.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h3 class="h5">AI does the work</h3>
+              <p class="text-secondary">Our model compares it against 4,000+ species in under a second.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h3 class="h5">Get the full story</h3>
+              <p class="text-secondary">See the name, habitat, danger level, and tips — saved to your journal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="pricing" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Unlock more with Premium</h2>
+          <p class="text-secondary">Simple, transparent, and built around how much you explore.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card h-100 text-center">
+              <div class="card-header"><h4 class="my-2">Free</h4></div>
+              <div class="card-body">
+                <div class="price">$0</div>
+                <ul>
+                  <li><i class="bi bi-check-lg"></i> 10 identifications / day</li>
+                  <li><i class="bi bi-check-lg"></i> Core species database</li>
+                  <li><i class="bi bi-check-lg"></i> Basic bite & sting info</li>
+                </ul>
+                <a href="contact.html" class="btn btn-outline-primary w-100">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card featured h-100 text-center">
+              <span class="badge-popular">Most Popular</span>
+              <div class="card-header"><h4 class="my-2">Standard</h4></div>
+              <div class="card-body">
+                <div class="price">$4.99<small> / mo</small></div>
+                <ul>
+                  <li><i class="bi bi-check-lg"></i> Unlimited identifications</li>
+                  <li><i class="bi bi-check-lg"></i> Full species encyclopedia</li>
+                  <li><i class="bi bi-check-lg"></i> Offline field journal</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary w-100">Go Standard</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card h-100 text-center">
+              <div class="card-header"><h4 class="my-2">Premium</h4></div>
+              <div class="card-body">
+                <div class="price">$9.99<small> / mo</small></div>
+                <ul>
+                  <li><i class="bi bi-check-lg"></i> Everything in Standard</li>
+                  <li><i class="bi bi-check-lg"></i> Ask a real entomologist</li>
+                  <li><i class="bi bi-check-lg"></i> Priority support, no ads</li>
+                </ul>
+                <a href="contact.html" class="btn btn-outline-primary w-100">Go Premium</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Explorers love BugLens</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card social-card h-100">
+              <div class="card-body">
+                <div class="hero-rating mb-2"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
+                <p class="mb-0 text-secondary">"Identified a wolf spider in my garage in two seconds flat. Genuinely impressive."</p>
+                <div class="d-flex align-items-center gap-2 mt-3">
+                  <span class="avatar-chip">A</span>
+                  <div><strong class="d-block">An N.</strong><small class="text-secondary">Verified user</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card social-card h-100">
+              <div class="card-body">
+                <div class="hero-rating mb-2"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
+                <p class="mb-0 text-secondary">"Used it on a school field trip — the kids wouldn't put their phones down. In a good way."</p>
+                <div class="d-flex align-items-center gap-2 mt-3">
+                  <span class="avatar-chip">M</span>
+                  <div><strong class="d-block">Minh T.</strong><small class="text-secondary">Teacher</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card social-card h-100">
+              <div class="card-body">
+                <div class="hero-rating mb-2"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span></div>
+                <p class="mb-0 text-secondary">"The offline mode saved me on a hike with zero signal. Caught a great moth ID anyway."</p>
+                <div class="d-flex align-items-center gap-2 mt-3">
+                  <span class="avatar-chip">L</span>
+                  <div><strong class="d-block">Lan P.</strong><small class="text-secondary">Naturalist</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center mb-5">
+              <h2 class="fw-bold">Frequently asked questions</h2>
+            </div>
+            <div class="accordion" id="faq">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Is BugLens free to use?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                  <div class="accordion-body">Yes — the Free plan gives you 10 identifications a day with no time limit. Standard and Premium remove the daily cap and unlock the full encyclopedia.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Can it identify spiders too, not just insects?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">Yes. The database covers spiders and other common arachnids alongside insects, with the same bite/sting safety info.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Does it work without an internet connection?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">Your most recent identifications and a core species set are cached on-device, so basic lookups still work offline. New identifications need a connection.</div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    How accurate is the identification?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body">Accuracy varies by species and photo quality, but averages in the mid-90% range overall, and the app shows a confidence score with every result so you know how sure it is.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-banner p-5 text-center">
+          <h2 class="fw-bold mb-3">Your next backyard mystery is one photo away.</h2>
+          <p class="text-secondary mb-4">Download BugLens free and start identifying today.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#" data-store="apple" class="btn-store">
+              <i class="bi bi-apple"></i>
+              <span class="store-label"><small>Download on the</small>App Store</span>
+            </a>
+            <a href="#" data-store="google" class="btn-store">
+              <i class="bi bi-google-play"></i>
+              <span class="store-label"><small>Get it on</small>Google Play</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== NEWSLETTER + FOOTER ===== -->
+  <footer class="site-footer py-5">
+    <div class="container">
+      <div class="newsletter-bar row align-items-center g-3 mb-5">
+        <div class="col-lg-7">
+          <h3 class="h4 mb-1">Get a weekly bug fact in your inbox</h3>
+          <p class="text-secondary mb-0">No spam, just one interesting species every week.</p>
+        </div>
+        <div class="col-lg-5">
+          <form id="newsletter-form" class="d-flex gap-2">
+            <input type="email" class="form-control" placeholder="you@email.com" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary px-4">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand fw-bold d-inline-flex mb-3" href="index.html">
+            <span class="brand-mark"><i class="bi bi-bug-fill"></i></span> BugLens
+          </a>
+          <p class="text-secondary">The AI camera that names any insect or spider in seconds.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+            <a href="mailto:hello@buglens.example" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="footer-heading">Product</div>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="features.html">Features</a></li>
+            <li class="mb-2"><a href="index.html#pricing">Pricing</a></li>
+            <li class="mb-2"><a href="social.html">Community</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="footer-heading">Company</div>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="contact.html">Contact</a></li>
+            <li class="mb-2"><a href="#">About</a></li>
+            <li class="mb-2"><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="footer-heading">Get the App</div>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" data-store="apple">App Store</a></li>
+            <li class="mb-2"><a href="#" data-store="google">Google Play</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="footer-heading">Legal</div>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Privacy</a></li>
+            <li class="mb-2"><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="divider-soft my-4">
+      <p class="text-secondary text-center mb-0">© 2026 BugLens. Not affiliated with Next Vision Limited; App Store link provided for reference.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
