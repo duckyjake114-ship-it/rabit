@@ -4,14 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BugLens is the AI camera that names any insect or spider in seconds. Point, snap, and learn — inspired by the Picture Insect app.">
-  <title>BugLens – Point Your Camera, Know the Bug</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%9E%3C/text%3E%3C/svg%3E">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Factory-direct plastic packaging, injection-molded products, and recycled granules from Bình Dương, Vietnam. OEM/ODM export to China, Taiwan & Asia.">
+  <title>Nam Việt Bình Dương Plastic — Vietnam Plastic Manufacturer & Exporter</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%BB%EF%B8%8F%3C/text%3E%3C/svg%3E">
 
   <!-- Bootstrap 5.3.8 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -22,26 +17,48 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body data-meta-title="home.meta.title" data-meta-desc="home.meta.desc">
+
+  <div class="draft-note text-center py-2 mb-0" style="border-radius:0;">
+    <span data-i18n="draft.banner">Draft preview — text, photos, and figures below are placeholders pending final review.</span>
+  </div>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">
-        <span class="brand-mark"><i class="bi bi-bug-fill"></i></span> BugLens
+      <a class="navbar-brand" href="index.html">
+        <span class="brand-mark"><i class="bi bi-recycle"></i></span>
+        <span>
+          <span class="brand-text d-block" data-i18n="brand.name">Nam Việt Bình Dương Plastic</span>
+          <span class="brand-sub" data-i18n="brand.sub">Plastic Manufacturing &amp; Export</span>
+        </span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-        aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="d-flex align-items-center order-lg-3">
+        <div class="lang-switch me-2 d-none d-sm-inline-flex">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="vi">VI</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
-          <li class="nav-item"><a class="nav-link" href="social.html">Social</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html" data-i18n="nav.products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-            <a href="#" data-store="apple" class="btn btn-primary btn-sm px-3">Get the App</a>
+            <a href="contact.html" class="btn btn-primary btn-sm px-3" data-i18n="nav.quote">Request a Quote</a>
+          </li>
+          <li class="nav-item mt-3 d-sm-none">
+            <div class="lang-switch">
+              <button type="button" data-lang="en">EN</button>
+              <button type="button" data-lang="vi">VI</button>
+              <button type="button" data-lang="zh">中文</button>
+            </div>
           </li>
         </ul>
       </div>
@@ -55,35 +72,36 @@
         <div class="row align-items-center g-5">
 
           <div class="col-lg-6 text-center text-lg-start">
-            <span class="eyebrow"><i class="bi bi-stars"></i> AI-powered identification</span>
-            <h1 class="display-4 fw-bold">Point your camera. <br> Know the bug instantly.</h1>
-            <p class="lead my-4 text-secondary">BugLens identifies thousands of insects and spiders from a single photo — then teaches you everything about them, from habitat to whether that bite needs a doctor.</p>
+            <span class="eyebrow"><i class="bi bi-buildings"></i> <span data-i18n="home.hero.eyebrow">Factory-Direct Plastic Manufacturer · Bình Dương, Vietnam</span></span>
+            <h1 class="display-4 fw-bold" data-i18n-html="home.hero.title">Reliable plastic manufacturing,<br>delivered from Vietnam to the world.</h1>
+            <p class="lead my-4 text-secondary" data-i18n="home.hero.subtitle">We produce and export plastic packaging, injection-molded products, and recycled granules directly from our own factory in Bình Dương — with a bilingual sales team experienced in serving partners across China and Taiwan.</p>
 
             <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mb-4">
-              <a href="#" data-store="apple" class="btn-store">
-                <i class="bi bi-apple"></i>
-                <span class="store-label"><small>Download on the</small>App Store</span>
-              </a>
-              <a href="#" data-store="google" class="btn-store">
-                <i class="bi bi-google-play"></i>
-                <span class="store-label"><small>Get it on</small>Google Play</span>
-              </a>
+              <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="home.hero.ctaQuote">Request a Quote</a>
+              <a href="products.html" class="btn btn-outline-primary btn-lg" data-i18n="home.hero.ctaProducts">View Our Products</a>
             </div>
 
-            <div class="hero-rating justify-content-center justify-content-lg-start">
-              <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
-              <span>Loved by 3M+ curious explorers worldwide</span>
+            <div class="hero-badges justify-content-center justify-content-lg-start">
+              <span class="hero-badge"><i class="bi bi-patch-check-fill"></i> <span data-i18n="home.hero.badge1">Quality-Controlled Production</span></span>
+              <span class="hero-badge"><i class="bi bi-gear-fill"></i> <span data-i18n="home.hero.badge2">OEM / ODM Available</span></span>
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="phone-stage">
-              <div class="phone-mockup">
-                <div class="notch"></div>
-                <img src="assets/images.jpg" alt="BugLens app screen identifying an insect from a photo">
+            <div class="hero-visual">
+              <div class="production-panel">
+                <div class="panel-heading" data-i18n="home.hero.panelHeading">What We Produce</div>
+                <div class="production-grid">
+                  <div class="tile"><i class="bi bi-bag-fill"></i><span data-i18n="home.hero.tile1">Packaging Bags</span></div>
+                  <div class="tile"><i class="bi bi-layers-fill"></i><span data-i18n="home.hero.tile2">Plastic Film</span></div>
+                  <div class="tile"><i class="bi bi-gear-wide-connected"></i><span data-i18n="home.hero.tile3">Molded Parts</span></div>
+                  <div class="tile"><i class="bi bi-recycle"></i><span data-i18n="home.hero.tile4">Recycled Pellets</span></div>
+                  <div class="tile"><i class="bi bi-pencil-square"></i><span data-i18n="home.hero.tile5">Custom OEM</span></div>
+                  <div class="tile"><i class="bi bi-globe-asia-australia"></i><span data-i18n="home.hero.tile6">Export Ready</span></div>
+                </div>
               </div>
-              <div class="phone-chip id-result"><i class="bi bi-check-circle-fill"></i> Monarch Butterfly</div>
-              <div class="phone-chip accuracy"><i class="bi bi-graph-up"></i> 97.8% match</div>
+              <div class="floating-chip chip-1"><i class="bi bi-check-circle-fill"></i> <span data-i18n="home.hero.chip1">Quality Checked</span></div>
+              <div class="floating-chip chip-2"><i class="bi bi-send-fill"></i> <span data-i18n="home.hero.chip2">Global Export</span></div>
             </div>
           </div>
 
@@ -91,23 +109,23 @@
       </div>
     </section>
 
-    <!-- ===== SPECIES MARQUEE ===== -->
+    <!-- ===== EXPORT MARKETS MARQUEE ===== -->
     <div class="marquee-wrap">
       <div class="marquee-track">
-        <span><i class="bi bi-bug"></i>Butterflies</span>
-        <span><i class="bi bi-bug"></i>Beetles</span>
-        <span><i class="bi bi-bug"></i>Spiders</span>
-        <span><i class="bi bi-bug"></i>Moths</span>
-        <span><i class="bi bi-bug"></i>Ants</span>
-        <span><i class="bi bi-bug"></i>Bees & Wasps</span>
-        <span><i class="bi bi-bug"></i>Dragonflies</span>
-        <span><i class="bi bi-bug"></i>Beetles</span>
-        <span><i class="bi bi-bug"></i>Spiders</span>
-        <span><i class="bi bi-bug"></i>Moths</span>
-        <span><i class="bi bi-bug"></i>Ants</span>
-        <span><i class="bi bi-bug"></i>Bees & Wasps</span>
-        <span><i class="bi bi-bug"></i>Dragonflies</span>
-        <span><i class="bi bi-bug"></i>Butterflies</span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.cn">China</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.tw">Taiwan</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.vn">Vietnam</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.kr">South Korea</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.jp">Japan</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.sg">Singapore</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.my">Malaysia</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.cn">China</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.tw">Taiwan</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.vn">Vietnam</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.kr">South Korea</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.jp">Japan</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.sg">Singapore</span></span>
+        <span><i class="bi bi-flag-fill"></i><span data-i18n="markets.my">Malaysia</span></span>
       </div>
     </div>
 
@@ -117,86 +135,75 @@
         <div class="row g-4">
           <div class="col-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number"><span data-counter="4000" data-suffix="+">0</span></div>
-              <div class="stat-label">Species in the database</div>
+              <div class="stat-number"><span data-counter="10" data-suffix="+">0</span></div>
+              <div class="stat-label" data-i18n="home.stats.years">Years in Operation</div>
             </div>
           </div>
           <div class="col-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number"><span data-counter="3" data-suffix="M+">0</span></div>
-              <div class="stat-label">Explorers worldwide</div>
+              <div class="stat-number"><span data-counter="20000" data-suffix="+">0</span></div>
+              <div class="stat-label" data-i18n="home.stats.factory">Factory Area (m²)</div>
             </div>
           </div>
           <div class="col-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number"><span data-counter="95" data-suffix="%">0</span></div>
-              <div class="stat-label">Average ID accuracy</div>
+              <div class="stat-number"><span data-counter="500" data-suffix="+">0</span></div>
+              <div class="stat-label" data-i18n="home.stats.capacity">Monthly Capacity (tons)</div>
             </div>
           </div>
           <div class="col-6 col-lg-3">
             <div class="stat-card">
-              <div class="stat-number"><span data-counter="1" data-suffix="s">0</span></div>
-              <div class="stat-label">Average identification time</div>
+              <div class="stat-number"><span data-counter="15" data-suffix="+">0</span></div>
+              <div class="stat-label" data-i18n="home.stats.countries">Export Markets</div>
             </div>
           </div>
         </div>
+        <p class="text-center text-secondary small mt-2">[Replace the figures above with your factory's real numbers]</p>
       </div>
     </section>
 
-    <!-- ===== FEATURES ===== -->
-    <section id="features" class="py-5">
+    <!-- ===== PRODUCTS OVERVIEW ===== -->
+    <section id="products" class="py-5 bg-light">
       <div class="container text-center">
         <div class="mb-5">
-          <h2 class="fw-bold">Built for curious minds</h2>
-          <p class="text-secondary">Everything you need to go from "what is that?!" to expert in seconds.</p>
+          <h2 class="fw-bold" data-i18n="home.products.heading">What We Manufacture</h2>
+          <p class="text-secondary" data-i18n="home.products.subheading">Four core product lines, all made in-house at our Bình Dương factory.</p>
         </div>
         <div class="row g-4">
 
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-3">
             <div class="surface-card text-center">
-              <div class="icon-badge mx-auto"><i class="bi bi-camera-fill"></i></div>
-              <h3 class="h5">Snap & Identify</h3>
-              <p class="text-secondary mb-0">Point your camera or upload a photo — get a match in about a second.</p>
+              <div class="icon-badge mx-auto"><i class="bi bi-bag-fill"></i></div>
+              <h3 class="h5" data-i18n="home.products.card1Title">Packaging Bags &amp; Films</h3>
+              <p class="text-secondary" data-i18n="home.products.card1Desc">PE / PP / HDPE / LDPE bags, rolls, and industrial packaging film in custom sizes and thicknesses.</p>
+              <a href="products.html" data-i18n="home.products.learnMore">Learn more</a>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-3">
             <div class="surface-card text-center">
-              <div class="icon-badge mx-auto"><i class="bi bi-bullseye"></i></div>
-              <h3 class="h5">High Accuracy</h3>
-              <p class="text-secondary mb-0">Trained on millions of real-world photos, even for tricky lookalike species.</p>
+              <div class="icon-badge accent mx-auto"><i class="bi bi-gear-wide-connected"></i></div>
+              <h3 class="h5" data-i18n="home.products.card2Title">Injection-Molded Products</h3>
+              <p class="text-secondary" data-i18n="home.products.card2Desc">Household and industrial plastic parts, crates, containers, and components to your specification.</p>
+              <a href="products.html" data-i18n="home.products.learnMore">Learn more</a>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-3">
             <div class="surface-card text-center">
-              <div class="icon-badge mx-auto"><i class="bi bi-shield-fill-exclamation"></i></div>
-              <h3 class="h5">Bite & Sting Safety</h3>
-              <p class="text-secondary mb-0">Instantly check if a species is venomous and what to do if you're bitten.</p>
+              <div class="icon-badge warm mx-auto"><i class="bi bi-recycle"></i></div>
+              <h3 class="h5" data-i18n="home.products.card3Title">Recycled Granules &amp; Pellets</h3>
+              <p class="text-secondary" data-i18n="home.products.card3Desc">Reclaimed and compounded PE / PP / ABS resin, processed to consistent quality standards.</p>
+              <a href="products.html" data-i18n="home.products.learnMore">Learn more</a>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6 col-lg-3">
             <div class="surface-card text-center">
-              <div class="icon-badge mx-auto"><i class="bi bi-wifi-off"></i></div>
-              <h3 class="h5">Works Offline</h3>
-              <p class="text-secondary mb-0">No signal in the woods? Your last 20 IDs stay saved and searchable.</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="surface-card text-center">
-              <div class="icon-badge mx-auto"><i class="bi bi-journal-richtext"></i></div>
-              <h3 class="h5">Field Journal</h3>
-              <p class="text-secondary mb-0">Every find is saved to your personal collection with date and location.</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="surface-card text-center">
-              <div class="icon-badge mx-auto"><i class="bi bi-translate"></i></div>
-              <h3 class="h5">12 Languages</h3>
-              <p class="text-secondary mb-0">Species info and care tips, translated for explorers everywhere.</p>
+              <div class="icon-badge mx-auto"><i class="bi bi-pencil-square"></i></div>
+              <h3 class="h5" data-i18n="home.products.card4Title">OEM / ODM Manufacturing</h3>
+              <p class="text-secondary" data-i18n="home.products.card4Desc">Custom molds, formulations, and private-label packaging built around your brand and market.</p>
+              <a href="products.html" data-i18n="home.products.learnMore">Learn more</a>
             </div>
           </div>
 
@@ -204,202 +211,92 @@
       </div>
     </section>
 
-    <!-- ===== HOW IT WORKS ===== -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="fw-bold">Three steps. That's it.</h2>
-          <p class="text-secondary">No sign-up required to try your first identification.</p>
-        </div>
-        <div class="row g-4 steps-row">
-          <div class="col-md-4">
-            <div class="step-card">
-              <div class="step-number">1</div>
-              <h3 class="h5">Snap a photo</h3>
-              <p class="text-secondary">Open BugLens and point your camera, or pick a photo from your gallery.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="step-card">
-              <div class="step-number">2</div>
-              <h3 class="h5">AI does the work</h3>
-              <p class="text-secondary">Our model compares it against 4,000+ species in under a second.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="step-card">
-              <div class="step-number">3</div>
-              <h3 class="h5">Get the full story</h3>
-              <p class="text-secondary">See the name, habitat, danger level, and tips — saved to your journal.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== PRICING ===== -->
-    <section id="pricing" class="py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="fw-bold">Unlock more with Premium</h2>
-          <p class="text-secondary">Simple, transparent, and built around how much you explore.</p>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="card pricing-card h-100 text-center">
-              <div class="card-header"><h4 class="my-2">Free</h4></div>
-              <div class="card-body">
-                <div class="price">$0</div>
-                <ul>
-                  <li><i class="bi bi-check-lg"></i> 10 identifications / day</li>
-                  <li><i class="bi bi-check-lg"></i> Core species database</li>
-                  <li><i class="bi bi-check-lg"></i> Basic bite & sting info</li>
-                </ul>
-                <a href="contact.html" class="btn btn-outline-primary w-100">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="card pricing-card featured h-100 text-center">
-              <span class="badge-popular">Most Popular</span>
-              <div class="card-header"><h4 class="my-2">Standard</h4></div>
-              <div class="card-body">
-                <div class="price">$4.99<small> / mo</small></div>
-                <ul>
-                  <li><i class="bi bi-check-lg"></i> Unlimited identifications</li>
-                  <li><i class="bi bi-check-lg"></i> Full species encyclopedia</li>
-                  <li><i class="bi bi-check-lg"></i> Offline field journal</li>
-                </ul>
-                <a href="contact.html" class="btn btn-primary w-100">Go Standard</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="card pricing-card h-100 text-center">
-              <div class="card-header"><h4 class="my-2">Premium</h4></div>
-              <div class="card-body">
-                <div class="price">$9.99<small> / mo</small></div>
-                <ul>
-                  <li><i class="bi bi-check-lg"></i> Everything in Standard</li>
-                  <li><i class="bi bi-check-lg"></i> Ask a real entomologist</li>
-                  <li><i class="bi bi-check-lg"></i> Priority support, no ads</li>
-                </ul>
-                <a href="contact.html" class="btn btn-outline-primary w-100">Go Premium</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TESTIMONIALS ===== -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="fw-bold">Explorers love BugLens</h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card social-card h-100">
-              <div class="card-body">
-                <div class="hero-rating mb-2"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
-                <p class="mb-0 text-secondary">"Identified a wolf spider in my garage in two seconds flat. Genuinely impressive."</p>
-                <div class="d-flex align-items-center gap-2 mt-3">
-                  <span class="avatar-chip">A</span>
-                  <div><strong class="d-block">An N.</strong><small class="text-secondary">Verified user</small></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card social-card h-100">
-              <div class="card-body">
-                <div class="hero-rating mb-2"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div>
-                <p class="mb-0 text-secondary">"Used it on a school field trip — the kids wouldn't put their phones down. In a good way."</p>
-                <div class="d-flex align-items-center gap-2 mt-3">
-                  <span class="avatar-chip">M</span>
-                  <div><strong class="d-block">Minh T.</strong><small class="text-secondary">Teacher</small></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card social-card h-100">
-              <div class="card-body">
-                <div class="hero-rating mb-2"><span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span></div>
-                <p class="mb-0 text-secondary">"The offline mode saved me on a hike with zero signal. Caught a great moth ID anyway."</p>
-                <div class="d-flex align-items-center gap-2 mt-3">
-                  <span class="avatar-chip">L</span>
-                  <div><strong class="d-block">Lan P.</strong><small class="text-secondary">Naturalist</small></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FAQ ===== -->
+    <!-- ===== WHY CHOOSE US ===== -->
     <section class="py-5">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="text-center mb-5">
-              <h2 class="fw-bold">Frequently asked questions</h2>
-            </div>
-            <div class="accordion" id="faq">
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                    Is BugLens free to use?
-                  </button>
-                </h3>
-                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq">
-                  <div class="accordion-body">Yes — the Free plan gives you 10 identifications a day with no time limit. Standard and Premium remove the daily cap and unlock the full encyclopedia.</div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                    Can it identify spiders too, not just insects?
-                  </button>
-                </h3>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
-                  <div class="accordion-body">Yes. The database covers spiders and other common arachnids alongside insects, with the same bite/sting safety info.</div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                    Does it work without an internet connection?
-                  </button>
-                </h3>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
-                  <div class="accordion-body">Your most recent identifications and a core species set are cached on-device, so basic lookups still work offline. New identifications need a connection.</div>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                    How accurate is the identification?
-                  </button>
-                </h3>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq">
-                  <div class="accordion-body">Accuracy varies by species and photo quality, but averages in the mid-90% range overall, and the app shows a confidence score with every result so you know how sure it is.</div>
-                </div>
-              </div>
-
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" data-i18n="home.why.heading">Why Partners Choose Us</h2>
+          <p class="text-secondary" data-i18n="home.why.subheading">Built for buyers who need dependable supply, not just a quote.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="value-card">
+              <h3 class="h5" data-i18n="home.why.item1Title">Factory-Direct Pricing</h3>
+              <p class="text-secondary mb-0" data-i18n="home.why.item1Desc">No middlemen — you buy straight from the production line, at production-line cost.</p>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="value-card">
+              <h3 class="h5" data-i18n="home.why.item2Title">Strict Quality Control</h3>
+              <p class="text-secondary mb-0" data-i18n="home.why.item2Desc">Incoming material checks, in-line inspection, and pre-shipment QC on every order.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="value-card">
+              <h3 class="h5" data-i18n="home.why.item3Title">Flexible MOQ &amp; Customization</h3>
+              <p class="text-secondary mb-0" data-i18n="home.why.item3Desc">From trial orders to full-container volumes, with custom colors, sizes, and printing.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="value-card">
+              <h3 class="h5" data-i18n="home.why.item4Title">China &amp; Taiwan Export Experience</h3>
+              <p class="text-secondary mb-0" data-i18n="home.why.item4Desc">A bilingual sales and logistics team that already knows how you like to work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" data-i18n="home.cert.heading">Quality You Can Trust</h2>
+          <p class="text-secondary" data-i18n="home.cert.subheading">[Replace with your factory's actual certifications and audit reports]</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-3">
+            <div class="cert-chip">
+              <i class="bi bi-award-fill"></i>
+              <div><strong class="d-block" data-i18n="home.cert.item1">ISO 9001:2015</strong><span class="cert-note" data-i18n="home.cert.item1Note">Quality Management System</span></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="cert-chip">
+              <i class="bi bi-shield-check"></i>
+              <div><strong class="d-block" data-i18n="home.cert.item2">ISO 14001</strong><span class="cert-note" data-i18n="home.cert.item2Note">Environmental Management System</span></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="cert-chip">
+              <i class="bi bi-globe-asia-australia"></i>
+              <div><strong class="d-block" data-i18n="home.cert.item3">REACH / RoHS</strong><span class="cert-note" data-i18n="home.cert.item3Note">Compliant for EU &amp; export markets</span></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="cert-chip">
+              <i class="bi bi-clipboard-check-fill"></i>
+              <div><strong class="d-block" data-i18n="home.cert.item4">Factory Audit Ready</strong><span class="cert-note" data-i18n="home.cert.item4Note">Available for client &amp; third-party inspection</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPORT MARKETS ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold" data-i18n="home.marketsSection.heading">Trusted Across Asia</h2>
+          <p class="text-secondary" data-i18n="home.marketsSection.subheading">Currently exporting to partners in these markets — [update with your real client countries].</p>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <span class="market-chip"><i class="bi bi-check-circle-fill"></i> <span data-i18n="markets.cn">China</span></span>
+          <span class="market-chip"><i class="bi bi-check-circle-fill"></i> <span data-i18n="markets.tw">Taiwan</span></span>
+          <span class="market-chip"><i class="bi bi-check-circle-fill"></i> <span data-i18n="markets.kr">South Korea</span></span>
+          <span class="market-chip"><i class="bi bi-check-circle-fill"></i> <span data-i18n="markets.jp">Japan</span></span>
+          <span class="market-chip"><i class="bi bi-check-circle-fill"></i> <span data-i18n="markets.sg">Singapore</span></span>
+          <span class="market-chip"><i class="bi bi-check-circle-fill"></i> <span data-i18n="markets.my">Malaysia</span></span>
         </div>
       </div>
     </section>
@@ -408,93 +305,80 @@
     <section class="py-5">
       <div class="container">
         <div class="cta-banner p-5 text-center">
-          <h2 class="fw-bold mb-3">Your next backyard mystery is one photo away.</h2>
-          <p class="text-secondary mb-4">Download BugLens free and start identifying today.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="#" data-store="apple" class="btn-store">
-              <i class="bi bi-apple"></i>
-              <span class="store-label"><small>Download on the</small>App Store</span>
-            </a>
-            <a href="#" data-store="google" class="btn-store">
-              <i class="bi bi-google-play"></i>
-              <span class="store-label"><small>Get it on</small>Google Play</span>
-            </a>
-          </div>
+          <h2 class="fw-bold mb-3" data-i18n="home.cta.heading">Looking for a Reliable Plastic Supplier?</h2>
+          <p class="mb-4" data-i18n="home.cta.subheading">Tell us what you need — our team replies with pricing and lead time within 1–2 business days.</p>
+          <a href="contact.html" class="btn btn-warm btn-lg" data-i18n="home.cta.button">Contact Our Sales Team</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ===== NEWSLETTER + FOOTER ===== -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer py-5">
     <div class="container">
-      <div class="newsletter-bar row align-items-center g-3 mb-5">
-        <div class="col-lg-7">
-          <h3 class="h4 mb-1">Get a weekly bug fact in your inbox</h3>
-          <p class="text-secondary mb-0">No spam, just one interesting species every week.</p>
-        </div>
-        <div class="col-lg-5">
-          <form id="newsletter-form" class="d-flex gap-2">
-            <input type="email" class="form-control" placeholder="you@email.com" aria-label="Email address" required>
-            <button type="submit" class="btn btn-primary px-4">Subscribe</button>
-          </form>
-        </div>
-      </div>
-
       <div class="row gy-4">
         <div class="col-lg-4">
-          <a class="navbar-brand fw-bold d-inline-flex mb-3" href="index.html">
-            <span class="brand-mark"><i class="bi bi-bug-fill"></i></span> BugLens
+          <a class="navbar-brand d-inline-flex mb-3" href="index.html">
+            <span class="brand-mark"><i class="bi bi-recycle"></i></span>
+            <span>
+              <span class="brand-text d-block" data-i18n="brand.name">Nam Việt Bình Dương Plastic</span>
+              <span class="brand-sub" data-i18n="brand.sub">Plastic Manufacturing &amp; Export</span>
+            </span>
           </a>
-          <p class="text-secondary">The AI camera that names any insect or spider in seconds.</p>
+          <p data-i18n="footer.tagline">Factory-direct plastic manufacturer in Bình Dương, Vietnam, exporting to partners across China, Taiwan, and Asia.</p>
           <div class="footer-social">
-            <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" aria-label="WeChat" target="_blank" rel="noopener"><i class="bi bi-wechat"></i></a>
             <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-            <a href="mailto:hello@buglens.example" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            <a href="mailto:sales@namvietbinhduongplastic.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
           </div>
         </div>
         <div class="col-lg-2 col-6">
-          <div class="footer-heading">Product</div>
+          <div class="footer-heading" data-i18n="footer.quickLinks">Quick Links</div>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="features.html">Features</a></li>
-            <li class="mb-2"><a href="index.html#pricing">Pricing</a></li>
-            <li class="mb-2"><a href="social.html">Community</a></li>
+            <li class="mb-2"><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li class="mb-2"><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li class="mb-2"><a href="products.html" data-i18n="nav.products">Products</a></li>
+            <li class="mb-2"><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-6">
-          <div class="footer-heading">Company</div>
+        <div class="col-lg-3 col-6">
+          <div class="footer-heading" data-i18n="footer.ourProducts">Our Products</div>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="contact.html">Contact</a></li>
-            <li class="mb-2"><a href="#">About</a></li>
-            <li class="mb-2"><a href="#">Careers</a></li>
+            <li class="mb-2"><a href="products.html" data-i18n="products_nav.bags">Packaging Bags &amp; Films</a></li>
+            <li class="mb-2"><a href="products.html" data-i18n="products_nav.injection">Injection-Molded Products</a></li>
+            <li class="mb-2"><a href="products.html" data-i18n="products_nav.recycled">Recycled Granules &amp; Pellets</a></li>
+            <li class="mb-2"><a href="products.html" data-i18n="products_nav.oem">OEM / ODM Manufacturing</a></li>
           </ul>
         </div>
-        <div class="col-lg-2 col-6">
-          <div class="footer-heading">Get the App</div>
+        <div class="col-lg-3">
+          <div class="footer-heading" data-i18n="footer.contactUs">Contact</div>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" data-store="apple">App Store</a></li>
-            <li class="mb-2"><a href="#" data-store="google">Google Play</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-6">
-          <div class="footer-heading">Legal</div>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#">Privacy</a></li>
-            <li class="mb-2"><a href="#">Terms</a></li>
+            <li class="mb-2 d-flex gap-2"><i class="bi bi-geo-alt-fill mt-1"></i><span data-i18n="footer.address">[Factory address — Bình Dương Province, Vietnam]</span></li>
+            <li class="mb-2 d-flex gap-2"><i class="bi bi-clock-fill mt-1"></i><span data-i18n="footer.hoursValue">Mon–Sat, 8:00–17:30 (GMT+7)</span></li>
+            <li class="mb-2 d-flex gap-2"><i class="bi bi-envelope-fill mt-1"></i><a href="mailto:sales@namvietbinhduongplastic.com">sales@namvietbinhduongplastic.com</a></li>
           </ul>
         </div>
       </div>
 
       <hr class="divider-soft my-4">
-      <p class="text-secondary text-center mb-0">© 2026 BugLens. Not affiliated with Next Vision Limited; App Store link provided for reference.</p>
+      <p class="text-center mb-0 small" data-i18n="footer.rights">© 2026 Nam Việt Bình Dương Plastic Co., Ltd. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ===== QUICK CONTACT ===== -->
+  <div class="quick-contact">
+    <a href="#" class="qc-zalo" aria-label="Zalo / WhatsApp" title="Zalo / WhatsApp"><i class="bi bi-chat-dots-fill"></i></a>
+    <a href="#" class="qc-wechat" aria-label="WeChat" title="WeChat"><i class="bi bi-wechat"></i></a>
+    <a href="mailto:sales@namvietbinhduongplastic.com" aria-label="Email" title="Email"><i class="bi bi-envelope-fill"></i></a>
+    <a href="tel:+84" class="qc-phone" aria-label="Call" title="Call"><i class="bi bi-telephone-fill"></i></a>
+  </div>
 
   <!-- Bootstrap bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
