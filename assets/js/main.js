@@ -1,34 +1,14 @@
 /* ===========================================================
-   BugLens – shared script
-   1. Centralized store links: every element with data-store="apple"
-      or data-store="google" gets its href wired here, so the real
-      App Store / Google Play URLs only have to be set in one place.
-   2. Marks the nav link matching the current page as "active".
-   3. Animates the stat counters once they scroll into view.
-   4. Contact form + newsletter form validation/feedback.
+   Nam Việt Bình Dương Plastic – shared script
+   1. Marks the nav link matching the current page as "active".
+   2. Animates the stat counters once they scroll into view.
+   3. Contact form validation/feedback (i18n-aware).
    =========================================================== */
 
 (function () {
   "use strict";
 
-  var STORE_LINKS = {
-    apple: "https://apps.apple.com/sg/app/picture-insect-spiders-bugs/id1461694973",
-    google: "https://play.google.com/store/apps/details?id=com.glority.pictureinsect"
-  };
-
-  // ---- 1. Wire up store buttons -------------------------------
-  function setupStoreLinks() {
-    document.querySelectorAll("[data-store]").forEach(function (el) {
-      var key = el.getAttribute("data-store");
-      if (STORE_LINKS[key]) {
-        el.setAttribute("href", STORE_LINKS[key]);
-        el.setAttribute("target", "_blank");
-        el.setAttribute("rel", "noopener");
-      }
-    });
-  }
-
-  // ---- 2. Active nav link -------------------------------------
+  // ---- 1. Active nav link -------------------------------------
   function setActiveNavLink() {
     var currentPage = window.location.pathname.split("/").pop() || "index.html";
     var links = document.querySelectorAll(".navbar-nav .nav-link");
@@ -45,7 +25,7 @@
     });
   }
 
-  // ---- 3. Animated stat counters -------------------------------
+  // ---- 2. Animated stat counters -------------------------------
   function setupCounters() {
     var counters = document.querySelectorAll("[data-counter]");
     if (!counters.length || !("IntersectionObserver" in window)) return;
@@ -83,7 +63,7 @@
     requestAnimationFrame(step);
   }
 
-  // ---- 4a. Contact form validation -----------------------------
+  // ---- 3. Contact / inquiry form validation ---------------------
   function setupContactForm() {
     var form = document.getElementById("contact-form");
     if (!form) return;
@@ -95,27 +75,20 @@
         form.classList.add("was-validated");
         return;
       }
-      showInlineSuccess(form, "Thanks! Your request has been noted. We'll get back to you soon.");
+      var successKey = form.getAttribute("data-success-key") || "contact.form.success";
+      var message = getTranslation(successKey) || "Thank you! Your message has been sent.";
+      showInlineSuccess(form, message);
       form.reset();
       form.classList.remove("was-validated");
     });
   }
 
-  // ---- 4b. Newsletter form ---------------------------------------
-  function setupNewsletterForm() {
-    var form = document.getElementById("newsletter-form");
-    if (!form) return;
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      var input = form.querySelector("input[type='email']");
-      if (!input || !input.checkValidity()) {
-        input && input.reportValidity();
-        return;
-      }
-      showInlineSuccess(form, "You're on the list — watch your inbox for bug facts!");
-      form.reset();
-    });
+  function getTranslation(key) {
+    var lang = document.documentElement.getAttribute("lang") || "en";
+    if (!window.NVBD_I18N || !window.NVBD_I18N[lang]) return null;
+    return key.split(".").reduce(function (acc, part) {
+      return acc && acc[part] !== undefined ? acc[part] : undefined;
+    }, window.NVBD_I18N[lang]);
   }
 
   function showInlineSuccess(form, message) {
@@ -131,10 +104,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    setupStoreLinks();
     setActiveNavLink();
     setupCounters();
     setupContactForm();
-    setupNewsletterForm();
   });
 })();
