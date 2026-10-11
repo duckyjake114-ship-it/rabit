@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập | Mọt Sách</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="trang-xac-thuc">
+  <main class="khung-xac-thuc">
+    <section class="panel-gioi-thieu">
+      <a href="index.html" class="logo">📚 Mọt Sách</a>
+      <h1>Mỗi trang sách là một chuyến đi.</h1>
+      <p>Đăng nhập để tiếp tục hành trình đọc sách, lưu tủ sách cá nhân và nhận gợi ý dành riêng cho bạn.</p>
+    </section>
+
+    <section class="panel-form">
+      <h2>Đăng nhập</h2>
+      <p class="phu-de">Chưa có tài khoản? <a href="dang-ky.html">Đăng ký ngay</a></p>
+
+      <div id="thong-bao" class="thong-bao" role="alert" hidden></div>
+
+      <form id="form-dang-nhap" novalidate>
+        <div class="nhom-o-nhap">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="ban@example.com" autocomplete="email" />
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="mat-khau">Mật khẩu</label>
+          <div class="o-mat-khau">
+            <input type="password" id="mat-khau" placeholder="Nhập mật khẩu" autocomplete="current-password" />
+            <button type="button" class="nut-mat" aria-label="Hiện mật khẩu">Hiện</button>
+          </div>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="hang-phu">
+          <label class="o-tick">
+            <input type="checkbox" id="ghi-nho" /> <span>Ghi nhớ đăng nhập</span>
+          </label>
+          <a href="#" id="quen-mat-khau">Quên mật khẩu?</a>
+        </div>
+
+        <button type="submit" class="nut-chinh">Đăng nhập</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/xac-thuc.js"></script>
+  <script src="js/dang-nhap.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký | Mọt Sách</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="trang-xac-thuc">
+  <main class="khung-xac-thuc">
+    <section class="panel-gioi-thieu">
+      <a href="index.html" class="logo">📚 Mọt Sách</a>
+      <h1>Gia nhập cộng đồng yêu sách.</h1>
+      <p>Tạo tài khoản miễn phí để khám phá hàng nghìn đầu sách Việt Nam và thế giới.</p>
+      <ul class="loi-ich">
+        <li>✔ Tủ sách cá nhân không giới hạn</li>
+        <li>✔ Gợi ý sách theo sở thích</li>
+        <li>✔ Ưu đãi dành riêng cho thành viên</li>
+      </ul>
+    </section>
+
+    <section class="panel-form">
+      <h2>Tạo tài khoản</h2>
+      <p class="phu-de">Đã có tài khoản? <a href="dang-nhap.html">Đăng nhập</a></p>
+
+      <div id="thong-bao" class="thong-bao" role="alert" hidden></div>
+
+      <form id="form-dang-ky" novalidate>
+        <div class="nhom-o-nhap">
+          <label for="ho-ten">Họ và tên</label>
+          <input type="text" id="ho-ten" placeholder="Nguyễn Văn An" autocomplete="name" />
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="ban@example.com" autocomplete="email" />
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="so-dien-thoai">Số điện thoại</label>
+          <input type="tel" id="so-dien-thoai" placeholder="0912345678" autocomplete="tel" />
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="mat-khau">Mật khẩu</label>
+          <div class="o-mat-khau">
+            <input type="password" id="mat-khau" placeholder="Ít nhất 8 ký tự" autocomplete="new-password" />
+            <button type="button" class="nut-mat" aria-label="Hiện mật khẩu">Hiện</button>
+          </div>
+          <div id="thanh-do-manh" class="thanh-do-manh"><span></span><span></span><span></span><span></span></div>
+          <small id="chu-do-manh" class="chu-do-manh"></small>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="xac-nhan-mat-khau">Nhập lại mật khẩu</label>
+          <div class="o-mat-khau">
+            <input type="password" id="xac-nhan-mat-khau" placeholder="Nhập lại mật khẩu" autocomplete="new-password" />
+            <button type="button" class="nut-mat" aria-label="Hiện mật khẩu">Hiện</button>
+          </div>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label class="o-tick">
+            <input type="checkbox" id="dieu-khoan" />
+            <span>Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> và <a href="#">Chính sách bảo mật</a></span>
+          </label>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <button type="submit" class="nut-chinh">Tạo tài khoản</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/xac-thuc.js"></script>
+  <script src="js/dang-ky.js"></script>
+</body>
+</html>
