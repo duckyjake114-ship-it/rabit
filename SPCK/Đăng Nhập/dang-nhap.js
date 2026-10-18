@@ -2,7 +2,7 @@
 // dang-nhap.js — Xử lý form đăng nhập
 // =====================================================
 
-if (layNguoiDungHienTai()) window.location.href = "index.html";
+chiDanhChoKhach();
 
 const form = document.getElementById("form-dang-nhap");
 const oEmail = document.getElementById("email");
@@ -11,32 +11,26 @@ const oGhiNho = document.getElementById("ghi-nho");
 const vungThongBao = document.getElementById("thong-bao");
 const nutGui = form.querySelector("button[type=submit]");
 
-// Điền sẵn email nếu vừa đăng ký xong
+// Vừa đăng ký xong → điền sẵn email
 const emailTuUrl = new URLSearchParams(window.location.search).get("email");
 if (emailTuUrl) {
   oEmail.value = emailTuUrl;
   hienThongBao(vungThongBao, "Tài khoản đã được tạo. Mời bạn đăng nhập!", "thanh-cong");
   oMatKhau.focus();
+} else if (sessionStorage.getItem(KHOA_QUAY_LAI)) {
+  hienThongBao(vungThongBao, "Vui lòng đăng nhập để tiếp tục.", "thong-tin");
 }
 
-const quyTac = [
+const kiemTraTatCa = ganKiemTra([
   [oEmail, () => KiemTra.email(oEmail.value)],
   [oMatKhau, () => (oMatKhau.value ? "" : "Vui lòng nhập mật khẩu.")],
-];
-
-quyTac.forEach(([oNhap, ham]) => {
-  oNhap.addEventListener("blur", () => hienLoi(oNhap, ham()));
-  oNhap.addEventListener("input", () => {
-    if (oNhap.closest(".nhom-o-nhap").classList.contains("co-loi")) hienLoi(oNhap, ham());
-  });
-});
+]);
 
 form.addEventListener("submit", async (suKien) => {
   suKien.preventDefault();
   vungThongBao.hidden = true;
 
-  const tatCaHopLe = quyTac.map(([oNhap, ham]) => hienLoi(oNhap, ham())).every(Boolean);
-  if (!tatCaHopLe) {
+  if (!kiemTraTatCa()) {
     form.querySelector(".co-loi input")?.focus();
     return;
   }
@@ -46,7 +40,11 @@ form.addEventListener("submit", async (suKien) => {
   try {
     const nguoiDung = await dangNhap(oEmail.value, oMatKhau.value, oGhiNho.checked);
     hienThongBao(vungThongBao, `Chào mừng ${nguoiDung.hoTen} quay trở lại!`, "thanh-cong");
-    setTimeout(() => (window.location.href = "index.html"), 800);
+
+    // Quay lại trang đang xem dở (nếu có), không thì về trang chủ
+    const quayLai = sessionStorage.getItem(KHOA_QUAY_LAI);
+    sessionStorage.removeItem(KHOA_QUAY_LAI);
+    setTimeout(() => (window.location.href = quayLai || DUONG_DAN.trangChu), 800);
   } catch (loi) {
     hienThongBao(vungThongBao, loi.message, "that-bai");
     oMatKhau.value = "";
@@ -56,12 +54,12 @@ form.addEventListener("submit", async (suKien) => {
   }
 });
 
-// "Quên mật khẩu" — bản demo chỉ lưu cục bộ nên không gửi được email
+// Bản demo lưu dữ liệu ngay trên trình duyệt nên chưa gửi được email khôi phục
 document.getElementById("quen-mat-khau").addEventListener("click", (suKien) => {
   suKien.preventDefault();
   hienThongBao(
     vungThongBao,
-    "Tính năng khôi phục mật khẩu qua email sẽ sớm ra mắt. Bạn có thể tạo tài khoản mới.",
+    "Tính năng khôi phục mật khẩu qua email sẽ sớm ra mắt. Hiện bạn có thể tạo tài khoản mới.",
     "thong-tin"
   );
 });

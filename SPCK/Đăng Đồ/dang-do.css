@@ -1,0 +1,163 @@
+/* =====================================================
+   dang-do.css — Riêng cho trang Đăng đồ
+   ===================================================== */
+
+.bat-buoc {
+  color: var(--mau-loi);
+}
+
+.bo-cuc-dang-do {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  align-items: start;
+  gap: 24px;
+}
+
+/* =========== TẢI ẢNH =========== */
+.vung-tai-anh {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 220px;
+  overflow: hidden;
+  border: 2px dashed var(--mau-vien);
+  border-radius: 16px;
+  background: var(--mau-nen);
+  color: var(--mau-phu);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.vung-tai-anh:hover,
+.vung-tai-anh.dang-keo {
+  border-color: var(--mau-chinh);
+  background: var(--mau-chinh-nhat);
+}
+
+.vung-tai-anh img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+.nut-chu {
+  margin-top: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--mau-loi);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+/* =========== GIÁ =========== */
+.o-gia {
+  position: relative;
+}
+
+.o-gia input {
+  padding-right: 36px;
+}
+
+.o-gia span {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mau-phu);
+}
+
+.tick-mien-phi {
+  margin-top: 8px;
+}
+
+/* =========== TÌNH TRẠNG =========== */
+.nhom-lua-chon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lua-chon {
+  position: relative;
+}
+
+.lua-chon input {
+  position: absolute;
+  opacity: 0;
+}
+
+.lua-chon span {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1.5px solid var(--mau-vien);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lua-chon input:checked + span {
+  background: var(--mau-chinh);
+  border-color: var(--mau-chinh);
+  color: #fff;
+}
+
+.lua-chon input:focus-visible + span {
+  box-shadow: 0 0 0 3px rgba(47, 111, 94, 0.25);
+}
+
+.co-loi .lua-chon span {
+  border-color: var(--mau-loi);
+}
+
+/* =========== NÚT FORM =========== */
+.hang-nut-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* =========== XEM TRƯỚC =========== */
+.xem-truoc {
+  position: sticky;
+  top: 84px;
+  display: grid;
+  gap: 16px;
+}
+
+.xem-truoc .the-do {
+  cursor: default;
+}
+
+.meo {
+  padding: 18px;
+  font-size: 0.9rem;
+}
+
+.meo h3 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.meo ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--mau-phu);
+}
+
+.meo li + li {
+  margin-top: 4px;
+}
+
+@media (max-width: 860px) {
+  .bo-cuc-dang-do {
+    grid-template-columns: 1fr;
+  }
+
+  .xem-truoc {
+    position: static;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng đồ | Mọt Sách</title>
+  <link rel="stylesheet" href="../Chung/chung.css" />
+  <link rel="stylesheet" href="dang-do.css" />
+</head>
+<body data-trang="dangDo" class="can-dang-nhap">
+  <header id="thanh-dieu-huong" class="thanh-dieu-huong"></header>
+
+  <main class="noi-dung">
+    <div class="tieu-de-trang">
+      <h1 id="tieu-de">Đăng đồ mới</h1>
+      <p>Điền thông tin món đồ bạn muốn bán hoặc tặng. Các mục có dấu <span class="bat-buoc">*</span> là bắt buộc.</p>
+    </div>
+
+    <div class="bo-cuc-dang-do">
+      <form id="form-dang-do" class="the" novalidate>
+        <div id="thong-bao" class="thong-bao" role="alert" hidden></div>
+
+        <!-- ẢNH -->
+        <div class="nhom-o-nhap">
+          <span class="nhan-o-nhap">Ảnh món đồ</span>
+          <label for="anh" class="vung-tai-anh" id="vung-tai-anh">
+            <img id="xem-anh" alt="Ảnh xem trước" hidden />
+            <span id="goi-y-anh">📷 Bấm hoặc kéo thả ảnh vào đây<br /><small>JPG, PNG — tối đa 5MB</small></span>
+          </label>
+          <input type="file" id="anh" accept="image/*" hidden />
+          <button type="button" id="xoa-anh" class="nut-chu" hidden>Xóa ảnh</button>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="ten">Tên món đồ <span class="bat-buoc">*</span></label>
+          <input type="text" id="ten" maxlength="80" placeholder="VD: Sách giáo khoa Vật lý 10" />
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="hang-2-cot">
+          <div class="nhom-o-nhap">
+            <label for="danh-muc">Danh mục <span class="bat-buoc">*</span></label>
+            <select id="danh-muc"></select>
+            <small class="thong-bao-loi"></small>
+          </div>
+
+          <div class="nhom-o-nhap">
+            <label for="khu-vuc">Khu vực <span class="bat-buoc">*</span></label>
+            <select id="khu-vuc"></select>
+            <small class="thong-bao-loi"></small>
+          </div>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="gia">Giá bán (VNĐ) <span class="bat-buoc">*</span></label>
+          <div class="o-gia">
+            <input type="number" id="gia" min="0" step="1000" placeholder="VD: 50000" />
+            <span>₫</span>
+          </div>
+          <label class="o-tick tick-mien-phi">
+            <input type="checkbox" id="mien-phi" />
+            <span>🎁 Tặng miễn phí</span>
+          </label>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <span class="nhan-o-nhap">Tình trạng <span class="bat-buoc">*</span></span>
+          <div class="nhom-lua-chon" id="nhom-tinh-trang"></div>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="mo-ta">Mô tả</label>
+          <textarea id="mo-ta" maxlength="500" placeholder="Tình trạng chi tiết, nơi giao nhận, lý do bán..."></textarea>
+          <small class="goi-y"><span id="dem-ky-tu">0</span>/500 ký tự</small>
+          <small class="thong-bao-loi"></small>
+        </div>
+
+        <div class="hang-nut-form">
+          <a href="../Danh sách/danh-sach.html" class="nut nut-phu">Hủy</a>
+          <button type="submit" class="nut nut-chinh" id="nut-gui">Đăng đồ</button>
+        </div>
+      </form>
+
+      <!-- XEM TRƯỚC -->
+      <aside class="xem-truoc">
+        <p class="nhan-o-nhap">Xem trước</p>
+        <div id="the-xem-truoc"></div>
+        <div class="meo the">
+          <h3>💡 Mẹo đăng đồ nhanh bán</h3>
+          <ul>
+            <li>Chụp ảnh rõ nét, đủ sáng, thấy được bìa sách.</li>
+            <li>Ghi rõ có viết/gạch trong sách hay không.</li>
+            <li>Đặt giá khoảng 30–50% giá bìa với sách đã dùng.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer id="chan-trang" class="chan-trang"></footer>
+
+  <script src="../Chung/chung.js"></script>
+  <script src="dang-do.js"></script>
+</body>
+</html>

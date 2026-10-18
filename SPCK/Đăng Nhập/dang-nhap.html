@@ -4,19 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Đăng nhập | Mọt Sách</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../Chung/chung.css" />
+  <link rel="stylesheet" href="dang-nhap.css" />
 </head>
 <body class="trang-xac-thuc">
   <main class="khung-xac-thuc">
     <section class="panel-gioi-thieu">
-      <a href="index.html" class="logo">📚 Mọt Sách</a>
-      <h1>Mỗi trang sách là một chuyến đi.</h1>
-      <p>Đăng nhập để tiếp tục hành trình đọc sách, lưu tủ sách cá nhân và nhận gợi ý dành riêng cho bạn.</p>
+      <a href="../Trang chủ/trang-chu.html" class="logo">📚 Mọt Sách</a>
+      <h1>Sách cũ, tri thức mới.</h1>
+      <p>Đăng nhập để đăng bán sách cũ, tặng đồ dùng học tập và kết nối với hàng nghìn bạn học sinh, sinh viên.</p>
+      <div class="trich-dan">
+        “Một cuốn sách hay trên giá sách là một người bạn dù quay lưng lại nhưng vẫn là bạn tốt.”
+      </div>
     </section>
 
     <section class="panel-form">
       <h2>Đăng nhập</h2>
-      <p class="phu-de">Chưa có tài khoản? <a href="dang-ky.html">Đăng ký ngay</a></p>
+      <p class="phu-de">Chưa có tài khoản? <a href="../Đăng Ký/dang-ky.html">Đăng ký ngay</a></p>
 
       <div id="thong-bao" class="thong-bao" role="alert" hidden></div>
 
@@ -38,17 +42,20 @@
 
         <div class="hang-phu">
           <label class="o-tick">
-            <input type="checkbox" id="ghi-nho" /> <span>Ghi nhớ đăng nhập</span>
+            <input type="checkbox" id="ghi-nho" />
+            <span>Ghi nhớ đăng nhập</span>
           </label>
           <a href="#" id="quen-mat-khau">Quên mật khẩu?</a>
         </div>
 
-        <button type="submit" class="nut-chinh">Đăng nhập</button>
+        <button type="submit" class="nut nut-chinh nut-rong">Đăng nhập</button>
       </form>
+
+      <a href="../Trang chủ/trang-chu.html" class="quay-ve">← Về trang chủ</a>
     </section>
   </main>
 
-  <script src="js/xac-thuc.js"></script>
-  <script src="js/dang-nhap.js"></script>
+  <script src="../Chung/chung.js"></script>
+  <script src="dang-nhap.js"></script>
 </body>
 </html>

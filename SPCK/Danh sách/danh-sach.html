@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách đồ | Mọt Sách</title>
+  <link rel="stylesheet" href="../Chung/chung.css" />
+  <link rel="stylesheet" href="danh-sach.css" />
+</head>
+<body data-trang="danhSach">
+  <header id="thanh-dieu-huong" class="thanh-dieu-huong"></header>
+
+  <main class="noi-dung">
+    <div class="tieu-de-trang">
+      <h1>Danh sách đồ</h1>
+      <p>Sách và đồ dùng học tập do cộng đồng Mọt Sách đăng.</p>
+    </div>
+
+    <div class="bo-cuc-danh-sach">
+      <!-- BỘ LỌC -->
+      <aside class="bo-loc the" aria-label="Bộ lọc">
+        <div class="nhom-o-nhap">
+          <label for="tim-kiem">Tìm kiếm</label>
+          <input type="search" id="tim-kiem" placeholder="Tên sách, mô tả..." />
+        </div>
+
+        <div class="nhom-o-nhap">
+          <span class="nhan-o-nhap">Danh mục</span>
+          <div id="loc-danh-muc" class="danh-sach-chon"></div>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="loc-khu-vuc">Khu vực</label>
+          <select id="loc-khu-vuc"></select>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label for="loc-tinh-trang">Tình trạng</label>
+          <select id="loc-tinh-trang">
+            <option value="">Tất cả</option>
+            <option>Mới</option>
+            <option>Như mới</option>
+            <option>Đã dùng</option>
+          </select>
+        </div>
+
+        <div class="nhom-o-nhap">
+          <label class="o-tick"><input type="checkbox" id="chi-mien-phi" /> <span>Chỉ đồ tặng miễn phí</span></label>
+        </div>
+        <div class="nhom-o-nhap">
+          <label class="o-tick"><input type="checkbox" id="hien-da-ban" /> <span>Hiện cả đồ đã bán</span></label>
+        </div>
+
+        <button type="button" id="xoa-loc" class="nut nut-phu nut-rong">Xóa bộ lọc</button>
+      </aside>
+
+      <!-- KẾT QUẢ -->
+      <section>
+        <div class="thanh-ket-qua">
+          <p id="dem-ket-qua">Đang tải...</p>
+          <div class="nhom-sap-xep">
+            <label for="sap-xep">Sắp xếp:</label>
+            <select id="sap-xep">
+              <option value="moi-nhat">Mới nhất</option>
+              <option value="cu-nhat">Cũ nhất</option>
+              <option value="gia-tang">Giá thấp → cao</option>
+              <option value="gia-giam">Giá cao → thấp</option>
+            </select>
+          </div>
+        </div>
+        <div id="luoi-do" class="luoi-do"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- HỘP CHI TIẾT MÓN ĐỒ -->
+  <dialog id="hop-chi-tiet" class="hop-chi-tiet">
+    <button type="button" class="nut-dong" id="nut-dong" aria-label="Đóng">✕</button>
+    <div id="noi-dung-chi-tiet"></div>
+  </dialog>
+
+  <footer id="chan-trang" class="chan-trang"></footer>
+
+  <script src="../Chung/chung.js"></script>
+  <script src="danh-sach.js"></script>
+</body>
+</html>

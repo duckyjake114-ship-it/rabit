@@ -1,0 +1,190 @@
+/* =====================================================
+   danh-sach.css — Riêng cho trang Danh sách
+   ===================================================== */
+
+.bo-cuc-danh-sach {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: start;
+  gap: 24px;
+}
+
+/* =========== BỘ LỌC =========== */
+.bo-loc {
+  position: sticky;
+  top: 84px;
+  padding: 20px;
+}
+
+.danh-sach-chon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--mau-vien);
+  background: #fff;
+  color: var(--mau-chu);
+  font-size: 0.85rem;
+}
+
+.chip:hover {
+  border-color: var(--mau-chinh);
+}
+
+.chip.dang-chon {
+  background: var(--mau-chinh);
+  border-color: var(--mau-chinh);
+  color: #fff;
+}
+
+/* =========== KẾT QUẢ =========== */
+.thanh-ket-qua {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#dem-ket-qua {
+  color: var(--mau-phu);
+}
+
+.nhom-sap-xep {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.nhom-sap-xep select {
+  width: auto;
+  padding: 8px 12px;
+}
+
+/* =========== HỘP CHI TIẾT =========== */
+.hop-chi-tiet {
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100vh - 48px);
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+.hop-chi-tiet::backdrop {
+  background: rgba(31, 41, 51, 0.55);
+}
+
+.nut-dong {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.chi-tiet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.chi-tiet .anh-do {
+  aspect-ratio: auto;
+  min-height: 100%;
+}
+
+.chi-tiet-noi-dung {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+}
+
+.chi-tiet-noi-dung h2 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+
+.chi-tiet-noi-dung .gia {
+  font-size: 1.5rem;
+}
+
+.bang-thong-so {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 16px;
+  font-size: 0.92rem;
+}
+
+.bang-thong-so dt {
+  color: var(--mau-phu);
+}
+
+.bang-thong-so dd {
+  font-weight: 600;
+}
+
+.mo-ta-do {
+  padding: 12px 14px;
+  background: var(--mau-nen);
+  border-radius: var(--bo-goc);
+  white-space: pre-line;
+  font-size: 0.95rem;
+}
+
+.nguoi-ban {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--mau-vien);
+}
+
+.nguoi-ban small {
+  display: block;
+  color: var(--mau-phu);
+}
+
+.hang-nut {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hang-nut .nut {
+  flex: 1;
+}
+
+@media (max-width: 860px) {
+  .bo-cuc-danh-sach {
+    grid-template-columns: 1fr;
+  }
+
+  .bo-loc {
+    position: static;
+  }
+
+  .chi-tiet {
+    grid-template-columns: 1fr;
+  }
+
+  .chi-tiet .anh-do {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+
+  .chi-tiet-noi-dung {
+    padding: 20px;
+  }
+}

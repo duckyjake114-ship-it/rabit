@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thông tin cá nhân | Mọt Sách</title>
+  <link rel="stylesheet" href="../Chung/chung.css" />
+  <link rel="stylesheet" href="thong-tin.css" />
+</head>
+<body data-trang="thongTin" class="can-dang-nhap">
+  <header id="thanh-dieu-huong" class="thanh-dieu-huong"></header>
+
+  <main class="noi-dung trang-thong-tin">
+    <!-- THẺ HỒ SƠ -->
+    <section class="the-ho-so">
+      <span class="anh-dai-dien anh-lon" id="anh-dai-dien"></span>
+      <div class="ho-so-chu">
+        <h1 id="ten-hien-thi"></h1>
+        <p id="email-hien-thi"></p>
+        <p class="tham-gia">Thành viên từ <span id="ngay-tham-gia"></span></p>
+      </div>
+      <div class="thong-ke-ca-nhan">
+        <div><strong id="tk-da-dang">0</strong><span>Đã đăng</span></div>
+        <div><strong id="tk-con-hang">0</strong><span>Còn hàng</span></div>
+        <div><strong id="tk-da-ban">0</strong><span>Đã bán</span></div>
+      </div>
+    </section>
+
+    <!-- THANH ĐIỀU HƯỚNG PHỤ -->
+    <nav class="thanh-dieu-huong-phu" role="tablist" aria-label="Mục thông tin cá nhân">
+      <button type="button" role="tab" data-tab="ho-so">👤 Hồ sơ</button>
+      <button type="button" role="tab" data-tab="do-da-dang">📦 Đồ đã đăng</button>
+      <button type="button" role="tab" data-tab="bao-mat">🔒 Bảo mật</button>
+    </nav>
+
+    <!-- TAB: HỒ SƠ -->
+    <section class="the" id="tab-ho-so" role="tabpanel" hidden>
+      <h2>Chỉnh sửa hồ sơ</h2>
+      <div id="thong-bao-ho-so" class="thong-bao" role="alert" hidden></div>
+      <form id="form-ho-so" novalidate>
+        <div class="hang-2-cot">
+          <div class="nhom-o-nhap">
+            <label for="ho-ten">Họ và tên</label>
+            <input type="text" id="ho-ten" autocomplete="name" />
+            <small class="thong-bao-loi"></small>
+          </div>
+          <div class="nhom-o-nhap">
+            <label for="email">Email</label>
+            <input type="email" id="email" readonly />
+            <small class="goi-y">Email dùng để đăng nhập, không thể thay đổi.</small>
+          </div>
+        </div>
+        <div class="hang-2-cot">
+          <div class="nhom-o-nhap">
+            <label for="so-dien-thoai">Số điện thoại</label>
+            <input type="tel" id="so-dien-thoai" autocomplete="tel" />
+            <small class="thong-bao-loi"></small>
+          </div>
+          <div class="nhom-o-nhap">
+            <label for="khu-vuc">Khu vực</label>
+            <select id="khu-vuc"></select>
+            <small class="thong-bao-loi"></small>
+          </div>
+        </div>
+        <div class="nhom-o-nhap">
+          <label for="gioi-thieu">Giới thiệu bản thân</label>
+          <textarea id="gioi-thieu" maxlength="300" placeholder="VD: Học sinh lớp 12, thích đọc truyện trinh thám..."></textarea>
+          <small class="thong-bao-loi"></small>
+        </div>
+        <div class="hang-nut-phai">
+          <button type="submit" class="nut nut-chinh">Lưu thay đổi</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- TAB: ĐỒ ĐÃ ĐĂNG -->
+    <section class="the" id="tab-do-da-dang" role="tabpanel" hidden>
+      <div class="tieu-de-tab">
+        <h2>Đồ bạn đã đăng</h2>
+        <a href="../Đăng Đồ/dang-do.html" class="nut nut-chinh nut-nho">+ Đăng đồ mới</a>
+      </div>
+      <div id="danh-sach-cua-toi" class="danh-sach-cua-toi"></div>
+    </section>
+
+    <!-- TAB: BẢO MẬT -->
+    <section id="tab-bao-mat" role="tabpanel" hidden>
+      <div class="the">
+        <h2>Đổi mật khẩu</h2>
+        <div id="thong-bao-mat-khau" class="thong-bao" role="alert" hidden></div>
+        <form id="form-doi-mat-khau" novalidate>
+          <div class="nhom-o-nhap">
+            <label for="mat-khau-cu">Mật khẩu hiện tại</label>
+            <div class="o-mat-khau">
+              <input type="password" id="mat-khau-cu" autocomplete="current-password" />
+              <button type="button" class="nut-mat" aria-label="Hiện mật khẩu">Hiện</button>
+            </div>
+            <small class="thong-bao-loi"></small>
+          </div>
+          <div class="hang-2-cot">
+            <div class="nhom-o-nhap">
+              <label for="mat-khau-moi">Mật khẩu mới</label>
+              <div class="o-mat-khau">
+                <input type="password" id="mat-khau-moi" autocomplete="new-password" />
+                <button type="button" class="nut-mat" aria-label="Hiện mật khẩu">Hiện</button>
+              </div>
+              <div id="thanh-do-manh" class="thanh-do-manh"><span></span><span></span><span></span><span></span></div>
+              <small id="chu-do-manh" class="chu-do-manh"></small>
+              <small class="thong-bao-loi"></small>
+            </div>
+            <div class="nhom-o-nhap">
+              <label for="xac-nhan-mat-khau">Nhập lại mật khẩu mới</label>
+              <div class="o-mat-khau">
+                <input type="password" id="xac-nhan-mat-khau" autocomplete="new-password" />
+                <button type="button" class="nut-mat" aria-label="Hiện mật khẩu">Hiện</button>
+              </div>
+              <small class="thong-bao-loi"></small>
+            </div>
+          </div>
+          <div class="hang-nut-phai">
+            <button type="submit" class="nut nut-chinh">Đổi mật khẩu</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="the vung-nguy-hiem">
+        <h2>Xóa tài khoản</h2>
+        <p>Toàn bộ thông tin và các món đồ bạn đã đăng sẽ bị xóa vĩnh viễn. Thao tác này không thể hoàn tác.</p>
+        <button type="button" id="nut-xoa-tai-khoan" class="nut nut-nguy-hiem">Xóa tài khoản của tôi</button>
+      </div>
+    </section>
+  </main>
+
+  <footer id="chan-trang" class="chan-trang"></footer>
+
+  <script src="../Chung/chung.js"></script>
+  <script src="thong-tin.js"></script>
+</body>
+</html>

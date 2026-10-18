@@ -1,0 +1,34 @@
+/* =====================================================
+   dang-nhap.css — Riêng cho trang Đăng nhập
+   ===================================================== */
+
+.trich-dan {
+  margin-bottom: auto;
+  padding: 16px 20px;
+  border-left: 4px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0 var(--bo-goc) var(--bo-goc) 0;
+  font-style: italic;
+}
+
+.hang-phu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0 20px;
+  font-size: 0.9rem;
+}
+
+.quay-ve {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--mau-phu);
+}
+
+@media (max-width: 860px) {
+  .trich-dan {
+    display: none;
+  }
+}

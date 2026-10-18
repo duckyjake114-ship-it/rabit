@@ -4,24 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Đăng ký | Mọt Sách</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../Chung/chung.css" />
+  <link rel="stylesheet" href="dang-ky.css" />
 </head>
 <body class="trang-xac-thuc">
   <main class="khung-xac-thuc">
     <section class="panel-gioi-thieu">
-      <a href="index.html" class="logo">📚 Mọt Sách</a>
+      <a href="../Trang chủ/trang-chu.html" class="logo">📚 Mọt Sách</a>
       <h1>Gia nhập cộng đồng yêu sách.</h1>
-      <p>Tạo tài khoản miễn phí để khám phá hàng nghìn đầu sách Việt Nam và thế giới.</p>
+      <p>Tạo tài khoản miễn phí để trao đổi sách cũ và đồ dùng học tập với các bạn quanh mình.</p>
       <ul class="loi-ich">
-        <li>✔ Tủ sách cá nhân không giới hạn</li>
-        <li>✔ Gợi ý sách theo sở thích</li>
-        <li>✔ Ưu đãi dành riêng cho thành viên</li>
+        <li><span>📤</span> Đăng bán hoặc tặng đồ chỉ trong 1 phút</li>
+        <li><span>🔎</span> Tìm sách giáo khoa giá rẻ theo khu vực</li>
+        <li><span>♻️</span> Tiết kiệm tiền và bảo vệ môi trường</li>
       </ul>
     </section>
 
     <section class="panel-form">
       <h2>Tạo tài khoản</h2>
-      <p class="phu-de">Đã có tài khoản? <a href="dang-nhap.html">Đăng nhập</a></p>
+      <p class="phu-de">Đã có tài khoản? <a href="../Đăng Nhập/dang-nhap.html">Đăng nhập</a></p>
 
       <div id="thong-bao" class="thong-bao" role="alert" hidden></div>
 
@@ -38,10 +39,18 @@
           <small class="thong-bao-loi"></small>
         </div>
 
-        <div class="nhom-o-nhap">
-          <label for="so-dien-thoai">Số điện thoại</label>
-          <input type="tel" id="so-dien-thoai" placeholder="0912345678" autocomplete="tel" />
-          <small class="thong-bao-loi"></small>
+        <div class="hang-2-cot">
+          <div class="nhom-o-nhap">
+            <label for="so-dien-thoai">Số điện thoại</label>
+            <input type="tel" id="so-dien-thoai" placeholder="0912345678" autocomplete="tel" />
+            <small class="thong-bao-loi"></small>
+          </div>
+
+          <div class="nhom-o-nhap">
+            <label for="khu-vuc">Khu vực</label>
+            <select id="khu-vuc"></select>
+            <small class="thong-bao-loi"></small>
+          </div>
         </div>
 
         <div class="nhom-o-nhap">
@@ -72,12 +81,12 @@
           <small class="thong-bao-loi"></small>
         </div>
 
-        <button type="submit" class="nut-chinh">Tạo tài khoản</button>
+        <button type="submit" class="nut nut-chinh nut-rong">Tạo tài khoản</button>
       </form>
     </section>
   </main>
 
-  <script src="js/xac-thuc.js"></script>
-  <script src="js/dang-ky.js"></script>
+  <script src="../Chung/chung.js"></script>
+  <script src="dang-ky.js"></script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mọt Sách | Chợ sách cũ cho học sinh, sinh viên</title>
+  <link rel="stylesheet" href="../Chung/chung.css" />
+  <link rel="stylesheet" href="trang-chu.css" />
+</head>
+<body data-trang="trangChu">
+  <header id="thanh-dieu-huong" class="thanh-dieu-huong"></header>
+
+  <main>
+    <!-- BANNER -->
+    <section class="banner">
+      <div class="banner-noi-dung">
+        <p class="loi-chao" id="loi-chao">Chào mừng bạn đến với Mọt Sách 👋</p>
+        <h1>Mua bán, trao tặng <span>sách cũ</span> &amp; đồ dùng học tập</h1>
+        <p class="mo-ta-banner">Tiết kiệm chi phí, lan tỏa tri thức. Tìm ngay cuốn sách bạn cần từ các anh chị khóa trước.</p>
+
+        <form id="form-tim-kiem" class="o-tim-kiem" role="search">
+          <input type="search" id="tu-khoa" placeholder="Bạn đang tìm sách gì? VD: Toán 12, IELTS..." aria-label="Từ khóa tìm kiếm" />
+          <button type="submit" class="nut nut-chinh">Tìm kiếm</button>
+        </form>
+
+        <div class="thong-ke">
+          <div><strong id="so-do">0</strong><span>món đồ đang đăng</span></div>
+          <div><strong id="so-mien-phi">0</strong><span>món được tặng miễn phí</span></div>
+          <div><strong id="so-thanh-vien">0</strong><span>thành viên</span></div>
+        </div>
+      </div>
+      <div class="banner-hinh" aria-hidden="true">
+        <div class="chong-sach">
+          <span style="background:#e07a5f"></span>
+          <span style="background:#5e81ac"></span>
+          <span style="background:#c9a227"></span>
+          <span style="background:#81b29a"></span>
+        </div>
+        <div class="bieu-tuong-lon">📚</div>
+      </div>
+    </section>
+
+    <div class="noi-dung">
+      <!-- DANH MỤC -->
+      <section class="khoi">
+        <div class="tieu-de-khoi">
+          <h2>Danh mục nổi bật</h2>
+        </div>
+        <div id="luoi-danh-muc" class="luoi-danh-muc"></div>
+      </section>
+
+      <!-- MỚI ĐĂNG -->
+      <section class="khoi">
+        <div class="tieu-de-khoi">
+          <h2>Mới đăng gần đây</h2>
+          <a href="../Danh sách/danh-sach.html">Xem tất cả →</a>
+        </div>
+        <div id="luoi-moi-dang" class="luoi-do"></div>
+      </section>
+
+      <!-- CÁCH HOẠT ĐỘNG -->
+      <section class="khoi">
+        <div class="tieu-de-khoi">
+          <h2>Cách hoạt động</h2>
+        </div>
+        <ol class="cac-buoc">
+          <li>
+            <span class="so-buoc">1</span>
+            <h3>Tạo tài khoản</h3>
+            <p>Đăng ký miễn phí bằng email và số điện thoại chỉ trong 30 giây.</p>
+          </li>
+          <li>
+            <span class="so-buoc">2</span>
+            <h3>Đăng đồ</h3>
+            <p>Chụp ảnh, ghi giá (hoặc để tặng miễn phí) và mô tả tình trạng món đồ.</p>
+          </li>
+          <li>
+            <span class="so-buoc">3</span>
+            <h3>Gặp nhau trao đổi</h3>
+            <p>Người mua liên hệ trực tiếp qua số điện thoại, hẹn gặp và nhận đồ.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- KÊU GỌI -->
+      <section class="keu-goi">
+        <div>
+          <h2 id="tieu-de-keu-goi">Bạn có sách cũ không dùng nữa?</h2>
+          <p>Đừng để sách phủ bụi — hãy trao lại cho người cần nó.</p>
+        </div>
+        <a href="../Đăng Đồ/dang-do.html" class="nut nut-trang">Đăng đồ ngay</a>
+      </section>
+    </div>
+  </main>
+
+  <footer id="chan-trang" class="chan-trang"></footer>
+
+  <script src="../Chung/chung.js"></script>
+  <script src="trang-chu.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* =====================================================
+   dang-ky.css — Riêng cho trang Đăng ký
+   ===================================================== */
+
+.loi-ich {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.loi-ich li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loi-ich span {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.panel-form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 860px) {
+  .loi-ich {
+    display: none;
+  }
+}

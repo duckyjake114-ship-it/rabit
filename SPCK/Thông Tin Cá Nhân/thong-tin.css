@@ -1,0 +1,235 @@
+/* =====================================================
+   thong-tin.css — Riêng cho trang Thông tin cá nhân
+   ===================================================== */
+
+.trang-thong-tin {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trang-thong-tin h2 {
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+}
+
+/* =========== THẺ HỒ SƠ =========== */
+.the-ho-so {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--mau-chinh), var(--mau-chinh-dam));
+  color: #fff;
+}
+
+.anh-lon {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  background: #fff;
+  color: var(--mau-chinh);
+}
+
+.ho-so-chu {
+  flex: 1;
+  min-width: 200px;
+}
+
+.ho-so-chu h1 {
+  font-size: 1.6rem;
+}
+
+.ho-so-chu p {
+  opacity: 0.85;
+  word-break: break-all;
+}
+
+.tham-gia {
+  font-size: 0.88rem;
+}
+
+.thong-ke-ca-nhan {
+  display: flex;
+  gap: 12px;
+}
+
+.thong-ke-ca-nhan div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 76px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.thong-ke-ca-nhan strong {
+  font-size: 1.4rem;
+}
+
+.thong-ke-ca-nhan span {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* =========== THANH ĐIỀU HƯỚNG PHỤ =========== */
+.thanh-dieu-huong-phu {
+  display: flex;
+  gap: 6px;
+  margin: 24px 0 20px;
+  padding: 6px;
+  overflow-x: auto;
+  background: var(--mau-the);
+  border-radius: 14px;
+  box-shadow: var(--bong);
+}
+
+.thanh-dieu-huong-phu button {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--mau-phu);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+
+.thanh-dieu-huong-phu button:hover {
+  background: var(--mau-chinh-nhat);
+  color: var(--mau-chinh);
+}
+
+.thanh-dieu-huong-phu button[aria-selected="true"] {
+  background: var(--mau-chinh);
+  color: #fff;
+}
+
+/* =========== FORM =========== */
+.hang-nut-phai {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* =========== ĐỒ ĐÃ ĐĂNG =========== */
+.tieu-de-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tieu-de-tab h2 {
+  margin: 0;
+}
+
+.danh-sach-cua-toi {
+  display: grid;
+  gap: 12px;
+}
+
+.dong-do {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  border: 1.5px solid var(--mau-vien);
+  border-radius: 14px;
+}
+
+.dong-do.da-ban {
+  background: var(--mau-nen);
+}
+
+.dong-do .anh-do {
+  width: 72px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.dong-do .anh-thay-the {
+  font-size: 1.8rem;
+}
+
+.dong-do h3 {
+  font-size: 1rem;
+}
+
+.trang-thai {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  vertical-align: middle;
+  background: var(--mau-chinh-nhat);
+  color: var(--mau-chinh);
+}
+
+.trang-thai.da-ban {
+  background: var(--mau-vien);
+  color: var(--mau-phu);
+}
+
+.nut-dong-do {
+  display: flex;
+  gap: 6px;
+}
+
+.nut-dong-do .nut {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* =========== VÙNG NGUY HIỂM =========== */
+.vung-nguy-hiem {
+  margin-top: 20px;
+  border: 1.5px solid #f5c6c0;
+}
+
+.vung-nguy-hiem h2 {
+  color: var(--mau-loi);
+}
+
+.vung-nguy-hiem p {
+  margin-bottom: 16px;
+  color: var(--mau-phu);
+}
+
+@media (max-width: 640px) {
+  .the-ho-so {
+    padding: 20px;
+  }
+
+  .thong-ke-ca-nhan {
+    width: 100%;
+  }
+
+  .thong-ke-ca-nhan div {
+    flex: 1;
+  }
+
+  .dong-do {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .dong-do .anh-do {
+    width: 64px;
+  }
+
+  .nut-dong-do {
+    grid-column: 1 / -1;
+  }
+
+  .nut-dong-do .nut {
+    flex: 1;
+  }
+}

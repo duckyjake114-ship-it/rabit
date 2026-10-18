@@ -1,0 +1,262 @@
+/* =====================================================
+   trang-chu.css — Riêng cho Trang chủ
+   ===================================================== */
+
+/* =========== BANNER =========== */
+.banner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 32px;
+  padding: 56px max(16px, calc((100% - 1100px) / 2 + 16px));
+  background: linear-gradient(135deg, var(--mau-chinh), var(--mau-chinh-dam));
+  color: #fff;
+}
+
+.loi-chao {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+}
+
+.banner h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+}
+
+.banner h1 span {
+  color: #f7d58b;
+}
+
+.mo-ta-banner {
+  margin: 16px 0 24px;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.o-tim-kiem {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.o-tim-kiem input {
+  border: none;
+}
+
+.o-tim-kiem input:focus {
+  box-shadow: none;
+}
+
+.o-tim-kiem .nut {
+  flex-shrink: 0;
+}
+
+.thong-ke {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.thong-ke div {
+  display: flex;
+  flex-direction: column;
+}
+
+.thong-ke strong {
+  font-size: 1.8rem;
+}
+
+.thong-ke span {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.banner-hinh {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+}
+
+.chong-sach {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.chong-sach span {
+  width: 46px;
+  border-radius: 6px 6px 2px 2px;
+  box-shadow: inset -6px 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.chong-sach span:nth-child(1) { height: 200px; }
+.chong-sach span:nth-child(2) { height: 240px; }
+.chong-sach span:nth-child(3) { height: 180px; transform: rotate(8deg); transform-origin: bottom left; }
+.chong-sach span:nth-child(4) { height: 220px; }
+
+.bieu-tuong-lon {
+  position: absolute;
+  right: 10%;
+  top: 0;
+  font-size: 4rem;
+  animation: bay 3s ease-in-out infinite;
+}
+
+@keyframes bay {
+  50% { transform: translateY(-12px); }
+}
+
+/* =========== KHỐI NỘI DUNG =========== */
+.khoi {
+  margin-bottom: 48px;
+}
+
+.tieu-de-khoi {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+}
+
+.tieu-de-khoi h2 {
+  font-size: 1.5rem;
+}
+
+.tieu-de-khoi a {
+  font-weight: 700;
+}
+
+/* Danh mục */
+.luoi-danh-muc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.o-danh-muc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+  background: var(--mau-the);
+  border-radius: 14px;
+  border: 1.5px solid var(--mau-vien);
+  color: var(--mau-chu);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.o-danh-muc:hover {
+  border-color: var(--mau-chinh);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.o-danh-muc .bieu-tuong {
+  font-size: 1.8rem;
+}
+
+.o-danh-muc strong {
+  font-size: 0.95rem;
+}
+
+.o-danh-muc small {
+  color: var(--mau-phu);
+}
+
+/* Các bước */
+.cac-buoc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cac-buoc li {
+  padding: 24px;
+  background: var(--mau-the);
+  border-radius: 16px;
+  box-shadow: var(--bong);
+}
+
+.so-buoc {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--mau-chinh-nhat);
+  color: var(--mau-chinh);
+  font-weight: 800;
+}
+
+.cac-buoc h3 {
+  margin-bottom: 6px;
+}
+
+.cac-buoc p {
+  color: var(--mau-phu);
+}
+
+/* Kêu gọi */
+.keu-goi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 36px 40px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e07a5f, #c9603f);
+  color: #fff;
+}
+
+.keu-goi p {
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+.nut-trang {
+  flex-shrink: 0;
+  background: #fff;
+  color: #c9603f;
+}
+
+.nut-trang:hover {
+  background: #fdf1ec;
+}
+
+@media (max-width: 860px) {
+  .banner {
+    grid-template-columns: 1fr;
+    padding: 40px 16px;
+  }
+
+  .banner h1 {
+    font-size: 1.9rem;
+  }
+
+  .banner-hinh {
+    display: none;
+  }
+
+  .cac-buoc {
+    grid-template-columns: 1fr;
+  }
+
+  .keu-goi {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+}
