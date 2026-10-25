@@ -364,10 +364,15 @@ function chuCaiDau(hoTen) {
   return (hoTen.trim().split(/\s+/).pop() || "?").charAt(0).toUpperCase();
 }
 
+// Chỉ chấp nhận ảnh tải lên (data URL) hoặc ảnh bìa lấy từ Open Library API
+function laAnhHopLe(anh) {
+  return typeof anh === "string" && (anh.startsWith("data:image/") || anh.startsWith("https://covers.openlibrary.org/"));
+}
+
 // Ảnh của món đồ — nếu không có ảnh thì hiện ô màu theo danh mục
 function taoAnhDo(doVat) {
   const dm = DANH_MUC[doVat.danhMuc] || DANH_MUC.khac;
-  if (doVat.anh && doVat.anh.startsWith("data:image/")) {
+  if (laAnhHopLe(doVat.anh)) {
     return `<img src="${doVat.anh}" alt="${thoatHtml(doVat.ten)}" loading="lazy" />`;
   }
   return `<div class="anh-thay-the" style="background:${dm.mau}"><span>${dm.bieuTuong}</span></div>`;

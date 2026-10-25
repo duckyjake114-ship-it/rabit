@@ -20,6 +20,17 @@
       <form id="form-dang-do" class="the" novalidate>
         <div id="thong-bao" class="thong-bao" role="alert" hidden></div>
 
+        <!-- TỰ ĐIỀN TỪ API -->
+        <div class="tim-sach-api">
+          <label for="tu-khoa-api" class="nhan-o-nhap">🔎 Đăng sách? Tự điền thông tin từ thư viện sách</label>
+          <div class="o-tim-api">
+            <input type="search" id="tu-khoa-api" placeholder="Nhập tên sách hoặc tác giả, VD: Harry Potter" />
+            <button type="button" id="nut-tim-api" class="nut nut-phu">Tìm</button>
+          </div>
+          <small class="nguon-api">Dữ liệu từ Open Library API — bấm vào một cuốn để điền tên, tác giả và ảnh bìa.</small>
+          <div id="ket-qua-api" class="ket-qua-api" aria-live="polite"></div>
+        </div>
+
         <!-- ẢNH -->
         <div class="nhom-o-nhap">
           <span class="nhan-o-nhap">Ảnh món đồ</span>
@@ -103,6 +114,7 @@
   <footer id="chan-trang" class="chan-trang"></footer>
 
   <script src="../Chung/chung.js"></script>
+  <script src="../Chung/api.js"></script>
   <script src="dang-do.js"></script>
 </body>
 </html>

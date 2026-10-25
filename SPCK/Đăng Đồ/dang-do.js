@@ -185,8 +185,10 @@ if (nguoiDung) {
 
   function veXemTruoc() {
     const duLieu = layDuLieuForm();
+    const chuaNhapGia = !oMienPhi.checked && oGia.value === "";
     theXemTruoc.innerHTML = taoTheDo({
       ...duLieu,
+      gia: chuaNhapGia ? -1 : duLieu.gia,
       id: "xem-truoc",
       ten: duLieu.ten || "Tên món đồ của bạn",
       danhMuc: duLieu.danhMuc || "khac",
@@ -194,11 +196,89 @@ if (nguoiDung) {
       ngayDang: new Date().toISOString(),
       daBan: false,
     });
+    if (chuaNhapGia) theXemTruoc.querySelector(".gia").textContent = "Chưa nhập giá";
   }
 
   form.addEventListener("input", veXemTruoc);
   form.addEventListener("change", veXemTruoc);
   veXemTruoc();
+
+  // ----- Tự điền thông tin sách từ Open Library API -----
+  const oTuKhoaApi = document.getElementById("tu-khoa-api");
+  const nutTimApi = document.getElementById("nut-tim-api");
+  const vungKetQuaApi = document.getElementById("ket-qua-api");
+  let ketQuaApi = [];
+  let lanTimCuoi = 0; // bỏ qua kết quả của lần tìm cũ nếu người dùng đã tìm lần mới
+
+  async function timTrenApi() {
+    const tuKhoa = oTuKhoaApi.value.trim();
+    if (tuKhoa.length < 2) {
+      vungKetQuaApi.innerHTML = `<p class="trang-thai-api">Nhập ít nhất 2 ký tự để tìm.</p>`;
+      return;
+    }
+
+    const lanTim = ++lanTimCuoi;
+    nutTimApi.disabled = true;
+    vungKetQuaApi.innerHTML = `<p class="trang-thai-api"><span class="vong-xoay"></span> Đang tìm "${thoatHtml(tuKhoa)}"...</p>`;
+
+    try {
+      const ketQua = await timSachApi(tuKhoa, 6);
+      if (lanTim !== lanTimCuoi) return;
+      ketQuaApi = ketQua;
+      vungKetQuaApi.innerHTML = ketQua.length
+        ? ketQua
+            .map(
+              (sach, i) => `
+              <button type="button" class="sach-api" data-vi-tri="${i}">
+                ${sach.anhBia ? `<img src="${thoatHtml(sach.anhBia.replace("-M.jpg", "-S.jpg"))}" alt="" />` : `<span class="bia-nho">📕</span>`}
+                <span>
+                  <strong>${thoatHtml(sach.ten)}</strong>
+                  <small>${thoatHtml(sach.tacGia)}${sach.namXuatBan ? " · " + thoatHtml(sach.namXuatBan) : ""}</small>
+                </span>
+              </button>`
+            )
+            .join("")
+        : `<p class="trang-thai-api">Không tìm thấy sách nào. Thử từ khóa khác nhé!</p>`;
+    } catch (loi) {
+      if (lanTim !== lanTimCuoi) return;
+      vungKetQuaApi.innerHTML = `<p class="trang-thai-api loi-api">⚠️ ${thoatHtml(loi.message)}</p>`;
+    } finally {
+      if (lanTim === lanTimCuoi) nutTimApi.disabled = false;
+    }
+  }
+
+  function dienTuSachApi(sach) {
+    oTen.value = sach.ten.slice(0, 80);
+    if (!oDanhMuc.value) oDanhMuc.value = "tham-khao";
+
+    const thongTin = [
+      `Tác giả: ${sach.tacGia}`,
+      sach.namXuatBan && `Năm xuất bản: ${sach.namXuatBan}`,
+      sach.soTrang && `Số trang: ${sach.soTrang}`,
+    ].filter(Boolean).join("\n");
+    oMoTa.value = (thongTin + (oMoTa.value ? "\n" + oMoTa.value : "")).slice(0, 500);
+    capNhatDem();
+
+    if (sach.anhBia && !anhHienTai.startsWith("data:")) datAnh(sach.anhBia);
+
+    [oTen, oDanhMuc].forEach((o) => hienLoi(o, ""));
+    vungKetQuaApi.innerHTML = `<p class="trang-thai-api">✅ Đã điền thông tin "${thoatHtml(sach.ten)}". Hãy bổ sung giá và tình trạng.</p>`;
+    veXemTruoc();
+    oGia.disabled ? nhomTinhTrang.querySelector("input").focus() : oGia.focus();
+  }
+
+  nutTimApi.addEventListener("click", timTrenApi);
+  // Nhấn Enter trong ô tìm kiếm thì tìm, không gửi form
+  oTuKhoaApi.addEventListener("keydown", (suKien) => {
+    if (suKien.key === "Enter") {
+      suKien.preventDefault();
+      timTrenApi();
+    }
+  });
+  vungKetQuaApi.addEventListener("click", (suKien) => {
+    const nut = suKien.target.closest(".sach-api");
+    if (nut) dienTuSachApi(ketQuaApi[Number(nut.dataset.viTri)]);
+  });
 
   // ----- Gửi form -----
   form.addEventListener("submit", (suKien) => {

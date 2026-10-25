@@ -69,3 +69,54 @@ luoiMoiDang.addEventListener("click", (suKien) => {
 luoiMoiDang.addEventListener("keydown", (suKien) => {
   if (suKien.key === "Enter") suKien.target.closest(".the-do")?.click();
 });
+
+// =========== SÁCH THỊNH HÀNH — GỌI OPEN LIBRARY API ===========
+const luoiThinhHanh = document.getElementById("luoi-thinh-hanh");
+const nutLamMoi = document.getElementById("nut-lam-moi");
+
+function veKhungDangTai(soLuong) {
+  luoiThinhHanh.innerHTML = Array.from({ length: soLuong }, () => `
+    <div class="the-sach-api dang-tai">
+      <div class="bia-api"></div>
+      <div class="dong-gia"></div>
+      <div class="dong-gia ngan"></div>
+    </div>`).join("");
+}
+
+function taoTheSachApi(sach) {
+  const bia = sach.anhBia
+    ? `<img src="${thoatHtml(sach.anhBia)}" alt="Bìa sách ${thoatHtml(sach.ten)}" loading="lazy" />`
+    : `<div class="bia-trong">📕</div>`;
+  return `
+    <a class="the-sach-api" href="${thoatHtml(sach.lienKet)}" target="_blank" rel="noopener">
+      <div class="bia-api">${bia}</div>
+      <h3>${thoatHtml(sach.ten)}</h3>
+      <p>${thoatHtml(sach.tacGia)}</p>
+      ${sach.namXuatBan ? `<small>Xuất bản năm ${thoatHtml(sach.namXuatBan)}</small>` : ""}
+    </a>`;
+}
+
+async function taiSachThinhHanh(lamMoi = false) {
+  const SO_LUONG = 6;
+
+  veKhungDangTai(SO_LUONG);
+  nutLamMoi.disabled = true;
+  try {
+    const danhSachSach = await laySachThinhHanh(SO_LUONG, lamMoi);
+    luoiThinhHanh.innerHTML = danhSachSach.length
+      ? danhSachSach.map(taoTheSachApi).join("")
+      : `<p class="trang-thai-api">Hôm nay chưa có dữ liệu sách thịnh hành.</p>`;
+  } catch (loi) {
+    luoiThinhHanh.innerHTML = `
+      <div class="trang-thai-api loi-api">
+        <span>⚠️ ${thoatHtml(loi.message)}</span>
+        <button type="button" class="nut nut-phu nut-nho" id="nut-thu-lai">Thử lại</button>
+      </div>`;
+    document.getElementById("nut-thu-lai").addEventListener("click", () => taiSachThinhHanh(true));
+  } finally {
+    nutLamMoi.disabled = false;
+  }
+}
+
+nutLamMoi.addEventListener("click", () => taiSachThinhHanh(true));
+taiSachThinhHanh();

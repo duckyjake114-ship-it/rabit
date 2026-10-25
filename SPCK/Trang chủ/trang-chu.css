@@ -260,3 +260,99 @@
     padding: 28px 24px;
   }
 }
+
+/* =========== SÁCH THỊNH HÀNH (API) =========== */
+.luoi-thinh-hanh {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 18px;
+}
+
+.the-sach-api {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: var(--mau-the);
+  border-radius: 14px;
+  box-shadow: var(--bong);
+  color: var(--mau-chu);
+  transition: transform 0.2s;
+}
+
+.the-sach-api:hover {
+  transform: translateY(-4px);
+  text-decoration: none;
+}
+
+.bia-api {
+  aspect-ratio: 2 / 3;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--mau-vien);
+}
+
+.bia-api img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bia-trong {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-size: 2.5rem;
+}
+
+.the-sach-api h3 {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.the-sach-api p {
+  font-size: 0.85rem;
+  color: var(--mau-phu);
+}
+
+.the-sach-api small {
+  font-size: 0.78rem;
+  color: var(--mau-phu);
+}
+
+/* Khung nhấp nháy khi đang tải */
+.the-sach-api.dang-tai .bia-api,
+.dong-gia {
+  background: linear-gradient(90deg, var(--mau-vien) 25%, #f1f4f0 50%, var(--mau-vien) 75%);
+  background-size: 200% 100%;
+  animation: nhap-nhay 1.2s infinite;
+}
+
+.dong-gia {
+  height: 12px;
+  margin-top: 6px;
+  border-radius: 6px;
+}
+
+.dong-gia.ngan {
+  width: 60%;
+}
+
+@keyframes nhap-nhay {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.loi-api {
+  grid-column: 1 / -1;
+  flex-direction: column;
+  padding: 32px 16px;
+  background: var(--mau-the);
+  border-radius: 14px;
+}

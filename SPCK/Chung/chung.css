@@ -445,6 +445,39 @@ input[readonly] {
   transform: translate(-50%, 0);
 }
 
+/* =========== ĐANG TẢI (API) =========== */
+.vong-xoay {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--mau-vien);
+  border-top-color: var(--mau-chinh);
+  border-radius: 50%;
+  vertical-align: middle;
+  animation: xoay 0.8s linear infinite;
+}
+
+@keyframes xoay {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.trang-thai-api {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  color: var(--mau-phu);
+  text-align: center;
+}
+
+.nguon-api {
+  font-size: 0.8rem;
+  color: var(--mau-phu);
+}
+
 /* =========== THẺ MÓN ĐỒ =========== */
 .luoi-do {
   display: grid;
